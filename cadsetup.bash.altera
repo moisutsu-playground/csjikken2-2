@@ -1,0 +1,28 @@
+# cadsetup.bash
+
+#
+if [ ! -f /etc/redhat-release ]; then
+   exit
+fi
+
+export LM_LICENSE_FILE=""
+export MANPATH=""
+unset LANG
+unset LC_ALL
+unset LC_CTYPE
+
+export PATH=$PATH:/pub1/jikken/eda/linux/bin
+
+#
+# EDA Vendors
+#
+
+export CADHOME=/pub1/jikken/eda3
+
+#### Quartus II 13.0sp1 ####
+export QUARTUS_HOME=${CADHOME}/altera/13.0sp1/quartus
+export PATH=$PATH:${QUARTUS_HOME}/bin
+
+#### Modelsim Altera Starter Edition 10.1d ####
+export MODELSIM_ASE_HOME=${CADHOME}/altera/13.0sp1/modelsim_ase
+export PATH=$PATH:${MODELSIM_ASE_HOME}/bin

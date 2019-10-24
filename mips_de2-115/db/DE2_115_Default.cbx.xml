@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE2_115_Default">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_na01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component" CBX_FILE_NAME="altpll_k3n2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0" CBX_FILE_NAME="shift_taps_gkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_28b1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_ol01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_e9b1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_b801.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_cco1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

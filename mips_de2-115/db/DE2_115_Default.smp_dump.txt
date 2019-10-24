@@ -1,0 +1,32 @@
+
+State Machine - |DE2_115_Default|VGA_CHAR_Ctrl:u8|main_st_reg
+Name main_st_reg.00000000 main_st_reg.00000010 main_st_reg.00000001 
+main_st_reg.00000000 0 0 0 
+main_st_reg.00000001 1 0 1 
+main_st_reg.00000010 1 1 0 
+
+State Machine - |DE2_115_Default|VGA_CHAR_Ctrl:u8|scan_st_reg
+Name scan_st_reg.00 scan_st_reg.10 scan_st_reg.01 
+scan_st_reg.00 0 0 0 
+scan_st_reg.01 1 0 1 
+scan_st_reg.10 1 1 0 
+
+State Machine - |DE2_115_Default|LCD_TEST:u5|mLCD_ST
+Name mLCD_ST.000011 mLCD_ST.000010 mLCD_ST.000001 mLCD_ST.000000 
+mLCD_ST.000000 0 0 0 0 
+mLCD_ST.000001 0 0 1 1 
+mLCD_ST.000010 0 1 0 1 
+mLCD_ST.000011 1 0 0 1 
+
+State Machine - |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|ST
+Name ST.11 ST.10 ST.01 ST.00 
+ST.00 0 0 0 0 
+ST.01 0 0 1 1 
+ST.10 0 1 0 1 
+ST.11 1 0 0 1 
+
+State Machine - |DE2_115_Default|I2C_AV_Config:u3|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 

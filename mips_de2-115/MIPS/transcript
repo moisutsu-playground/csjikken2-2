@@ -1,0 +1,184 @@
+# vsim . 
+# ** Error: (vsim-19) Failed to access library '' at "".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+vlog test_cpu.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rom8x1024_sim
+# -- Compiling module ram8x2048_sim
+# -- Compiling module alu
+# -- Compiling module pc
+# -- Compiling module registers
+# -- Compiling module plus4
+# -- Compiling module adder32
+# -- Compiling module mux32_32_32
+# -- Compiling module mux5_5_5
+# -- Compiling module main_ctrl
+# -- Compiling module alu_ctrler
+# -- Compiling module shifter32_32_l2
+# -- Compiling module signext16_32
+# -- Compiling module is_branch
+# -- Compiling module cpu
+# -- Compiling module test_cpu
+# 
+# Top level modules:
+# 	rom8x1024_sim
+# 	ram8x2048_sim
+# 	test_cpu
+vsim test_cpu
+# vsim test_cpu 
+# Loading work.test_cpu
+# Loading work.cpu
+# Loading work.alu
+# Loading work.pc
+# Loading work.registers
+# Loading work.plus4
+# Loading work.adder32
+# Loading work.mux32_32_32
+# Loading work.mux5_5_5
+# Loading work.main_ctrl
+# Loading work.alu_ctrler
+# Loading work.shifter32_32_l2
+# Loading work.signext16_32
+# Loading work.is_branch
+# ** Warning: (vsim-3015) test_cpu.v(49): [PCDPC] - Port size (12 or 12) does not match connection size (8) for port 'o_pc'. The port definition is at: cpu.v(100).
+#         Region: /test_cpu/cpua
+add wave -position end  sim:/test_cpu/clk
+add wave -position end  sim:/test_cpu/reset
+add wave -position end  sim:/test_cpu/clk_ctrl0
+add wave -position end  sim:/test_cpu/clk_ctrl1
+add wave -position end  sim:/test_cpu/clk_ctrl_clk
+add wave -position end  sim:/test_cpu/i_ram_addr
+add wave -position end  sim:/test_cpu/i_ram_wdata
+add wave -position end  sim:/test_cpu/i_ram_wen
+add wave -position end  sim:/test_cpu/o_clock
+add wave -position end  sim:/test_cpu/o_pc
+add wave -position end  sim:/test_cpu/o_alu_y
+add wave -position end  sim:/test_cpu/o_alu_a
+add wave -position end  sim:/test_cpu/o_alu_b
+add wave -position end  sim:/test_cpu/o_alu_ctrl
+add wave -position end  sim:/test_cpu/o_alu_comp
+add wave -position end  sim:/test_cpu/o_reg_data1
+add wave -position end  sim:/test_cpu/o_reg_idx1
+add wave -position end  sim:/test_cpu/o_reg_data2
+add wave -position end  sim:/test_cpu/o_reg_idx2
+add wave -position end  sim:/test_cpu/o_reg_wdata
+add wave -position end  sim:/test_cpu/o_reg_widx
+add wave -position end  sim:/test_cpu/o_reg_wen
+add wave -position end  sim:/test_cpu/o_ram_addr
+add wave -position end  sim:/test_cpu/o_ram_rdata
+add wave -position end  sim:/test_cpu/o_ram_wdata
+add wave -position end  sim:/test_cpu/o_ram_wen
+add wave -position end  sim:/test_cpu/cpua/clk
+add wave -position end  sim:/test_cpu/cpua/reset
+add wave -position end  sim:/test_cpu/cpua/clk_ctrl0
+add wave -position end  sim:/test_cpu/cpua/clk_ctrl1
+add wave -position end  sim:/test_cpu/cpua/clk_ctrl_clk
+add wave -position end  sim:/test_cpu/cpua/i_ram_addr
+add wave -position end  sim:/test_cpu/cpua/i_ram_wdata
+add wave -position end  sim:/test_cpu/cpua/i_ram_wen
+add wave -position end  sim:/test_cpu/cpua/o_clock
+add wave -position end  sim:/test_cpu/cpua/o_pc
+add wave -position end  sim:/test_cpu/cpua/o_alu_y
+add wave -position end  sim:/test_cpu/cpua/o_alu_a
+add wave -position end  sim:/test_cpu/cpua/o_alu_b
+add wave -position end  sim:/test_cpu/cpua/o_alu_ctrl
+add wave -position end  sim:/test_cpu/cpua/o_alu_comp
+add wave -position end  sim:/test_cpu/cpua/o_reg_data1
+add wave -position end  sim:/test_cpu/cpua/o_reg_idx1
+add wave -position end  sim:/test_cpu/cpua/o_reg_data2
+add wave -position end  sim:/test_cpu/cpua/o_reg_idx2
+add wave -position end  sim:/test_cpu/cpua/o_reg_wdata
+add wave -position end  sim:/test_cpu/cpua/o_reg_widx
+add wave -position end  sim:/test_cpu/cpua/o_reg_wen
+add wave -position end  sim:/test_cpu/cpua/o_ram_addr
+add wave -position end  sim:/test_cpu/cpua/o_ram_rdata
+add wave -position end  sim:/test_cpu/cpua/o_ram_wdata
+add wave -position end  sim:/test_cpu/cpua/o_ram_wen
+add wave -position end  sim:/test_cpu/cpua/max_bunsyuu_reg_val
+add wave -position end  sim:/test_cpu/cpua/clock_reg
+add wave -position end  sim:/test_cpu/cpua/bunsyuu_reg
+add wave -position end  sim:/test_cpu/cpua/clock
+add wave -position end  sim:/test_cpu/cpua/clock_rom
+add wave -position end  sim:/test_cpu/cpua/clock_ram
+add wave -position end  sim:/test_cpu/cpua/rom_addr
+add wave -position end  sim:/test_cpu/cpua/rom_data
+add wave -position end  sim:/test_cpu/cpua/ram_addr
+add wave -position end  sim:/test_cpu/cpua/ram_write_enable
+add wave -position end  sim:/test_cpu/cpua/ram_write_data
+add wave -position end  sim:/test_cpu/cpua/ram_read_data
+add wave -position end  sim:/test_cpu/cpua/key_ram_addr
+add wave -position end  sim:/test_cpu/cpua/key_ram_wdata
+add wave -position end  sim:/test_cpu/cpua/key_ram_wen
+add wave -position end  sim:/test_cpu/cpua/alu_a
+add wave -position end  sim:/test_cpu/cpua/alu_b
+add wave -position end  sim:/test_cpu/cpua/alu_ctrl
+add wave -position end  sim:/test_cpu/cpua/alu_y
+add wave -position end  sim:/test_cpu/cpua/alu_comp
+add wave -position end  sim:/test_cpu/cpua/pc_next
+add wave -position end  sim:/test_cpu/cpua/pc
+add wave -position end  sim:/test_cpu/cpua/reg_read_idx1
+add wave -position end  sim:/test_cpu/cpua/reg_read_idx2
+add wave -position end  sim:/test_cpu/cpua/reg_write_idx
+add wave -position end  sim:/test_cpu/cpua/reg_write_data
+add wave -position end  sim:/test_cpu/cpua/reg_read_data1
+add wave -position end  sim:/test_cpu/cpua/reg_read_data2
+add wave -position end  sim:/test_cpu/cpua/inc_a
+add wave -position end  sim:/test_cpu/cpua/inc_y
+add wave -position end  sim:/test_cpu/cpua/add_a
+add wave -position end  sim:/test_cpu/cpua/add_b
+add wave -position end  sim:/test_cpu/cpua/add_y
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel1_d0
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel1_d1
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel1_s
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel1_y
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel2_d0
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel2_d1
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel2_s
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel2_y
+add wave -position end  sim:/test_cpu/cpua/alu_ram_sel_d0
+add wave -position end  sim:/test_cpu/cpua/alu_ram_sel_d1
+add wave -position end  sim:/test_cpu/cpua/alu_ram_sel_s
+add wave -position end  sim:/test_cpu/cpua/alu_ram_sel_y
+add wave -position end  sim:/test_cpu/cpua/link_sel_d0
+add wave -position end  sim:/test_cpu/cpua/link_sel_d1
+add wave -position end  sim:/test_cpu/cpua/link_sel_s
+add wave -position end  sim:/test_cpu/cpua/link_sel_y
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel1_d0
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel1_d1
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel1_s
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel1_y
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel2_d0
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel2_d1
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel2_s
+add wave -position end  sim:/test_cpu/cpua/reg_widx_sel2_y
+add wave -position end  sim:/test_cpu/cpua/pc_sel_d0
+add wave -position end  sim:/test_cpu/cpua/pc_sel_d1
+add wave -position end  sim:/test_cpu/cpua/pc_sel_s
+add wave -position end  sim:/test_cpu/cpua/pc_sel_y
+add wave -position end  sim:/test_cpu/cpua/instruction
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel1
+add wave -position end  sim:/test_cpu/cpua/alu_b_sel2
+add wave -position end  sim:/test_cpu/cpua/alu_op
+add wave -position end  sim:/test_cpu/cpua/is_branch_ctrl
+add wave -position end  sim:/test_cpu/cpua/reg_write_enable
+add wave -position end  sim:/test_cpu/cpua/jp
+add wave -position end  sim:/test_cpu/cpua/link
+add wave -position end  sim:/test_cpu/cpua/jpr
+add wave -position end  sim:/test_cpu/cpua/shiftv
+add wave -position end  sim:/test_cpu/cpua/do_sign_ext
+add wave -position end  sim:/test_cpu/cpua/func
+add wave -position end  sim:/test_cpu/cpua/sh_a
+add wave -position end  sim:/test_cpu/cpua/sh_y
+add wave -position end  sim:/test_cpu/cpua/sh_j_a
+add wave -position end  sim:/test_cpu/cpua/sh_j_y
+add wave -position end  sim:/test_cpu/cpua/a16
+add wave -position end  sim:/test_cpu/cpua/y32
+add wave -position end  sim:/test_cpu/cpua/is_branch_d0
+add wave -position end  sim:/test_cpu/cpua/is_branch_d1
+add wave -position end  sim:/test_cpu/cpua/is_branch_y
+add wave -position end  sim:/test_cpu/cpua/alu_a_sel1_d0
+add wave -position end  sim:/test_cpu/cpua/alu_a_sel1_d1
+add wave -position end  sim:/test_cpu/cpua/alu_a_sel1_s
+add wave -position end  sim:/test_cpu/cpua/alu_a_sel1_y
+run 1000ns
