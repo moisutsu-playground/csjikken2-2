@@ -39,7 +39,7 @@
 //
 // 追加設計 1 のヒント(10)：I 形式の命令 sw の追加、命令コードの定義
 //
-`define     SW  6'b001100  //  store word (I 形式)
+`define     SW  6'b101011  //  store word (I 形式)
 //
 //
 //
@@ -289,7 +289,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 1 のヒント(11)：I 形式の命令 sw の追加、RAM への制御信号の記述
 //
-  assign  ram_write_enable = ((op_code == `SW) && 0) ? 1'b1 : 1'b0;
+  assign  ram_write_enable = (op_code == `SW) ? 1'b1 : 1'b0;
 //
 //
 //
@@ -319,7 +319,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 1 のヒント(12)：I 形式の命令 sw の追加、is_branch モジュールへの制御信号の記述
 //
-      `SW:     is_branch_ctrl_tmp = 3'bXXX;
+      `SW:     is_branch_ctrl_tmp = 3'b110;
 //
 //
 //
@@ -424,7 +424,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 1 のヒント(13)：I 形式の命令 sw の追加、ALU の入力ポート B へ流すデータを選択するセレクト信号の記述
 //
-      `SW:     alu_b_sel1_s_tmp = 1'bX;
+      `SW:     alu_b_sel1_s_tmp = 1'b1;
 //
 //
 //
@@ -482,7 +482,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 1 のヒント(14)：I 形式の命令 sw の追加、符号拡張を行う制御信号の記述
 //
-                        || ((op_code == `SW) && 0)
+                        || (op_code == `SW)
 //
 //
 //
@@ -525,7 +525,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 1 のヒント(15)：I 形式の命令 sw の追加、加算を行う制御信号の記述
 //
-      `SW:     alu_op_tmp = 3'bXXX;
+      `SW:     alu_op_tmp = 3'b000;
 //
 //
 //
@@ -587,7 +587,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 1 のヒント(16)：I 形式の命令 sw の追加、レジスタファイルへの制御信号の記述
 //
-      `SW:     reg_write_enable_tmp = 1'bX;
+      `SW:     reg_write_enable_tmp = 1'b0;
 //
 //
 //
