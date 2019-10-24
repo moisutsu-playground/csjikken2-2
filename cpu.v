@@ -63,15 +63,16 @@ Top module || Sub modules
 //
 //論理シミュレーション用
 //DE2, quartus, 動作実験時コメントアウト
-//`include "rom8x1024_sim.v"  // ROMの記述（論理シミュレーション用）
-//`include "ram8x2048_sim.v"  // RAMの記述（論理シミュレーション用）
+`include "rom8x1024_sim.v"  // ROMの記述（論理シミュレーション用）
+`include "ram8x2048_sim.v"  // RAMの記述（論理シミュレーション用）
 
 //
 //動作実験用
 //論理シミュレーション時コメントアウト
+/*
 `include "rom8x1024_DE2.v"  // ROMの記述（DE2ボード, quartus, 動作実験用）
 `include "ram8x2048_DE2.v"  // RAMの記述（DE2ボード, quartus, 動作実験用）
-
+*/
 `include "alu.v"           // ALUの記述
 `include "pc.v"            // PCの記述
 `include "registers.v"     // レジスタファイルの記述
@@ -312,11 +313,12 @@ module cpu (clk, reset,
   //
   //論理シミュレーション用
   //DE2, quartus, 動作実験時コメントアウト
-  //rom8x1024_sim  rom8x1024a(rom_addr, rom_data);
+  rom8x1024_sim  rom8x1024a(rom_addr, rom_data);
   //
   //動作実験用
   //論理シミュレーション時コメントアウト
-  rom8x1024_DE2  rom8x1024a(clock_rom, rom_addr, rom_data);
+  
+  //rom8x1024_DE2  rom8x1024a(clock_rom, rom_addr, rom_data);
 
   //                        +----+
   //                   clk->|    |
@@ -330,15 +332,18 @@ module cpu (clk, reset,
   //
   //論理シミュレーション用
   //DE2, quartus, 動作実験時コメントアウト
-  //ram8x2048_sim  ram8x2048a(clk, ram_addr, ram_write_enable,
-  //                          ram_write_data, ram_read_data,
-  //                          key_ram_addr, key_ram_wdata, key_ram_wen);
+  ram8x2048_sim  ram8x2048a(clk, ram_addr, ram_write_enable,
+                            ram_write_data, ram_read_data,
+                            key_ram_addr, key_ram_wdata, key_ram_wen);
   //
   //動作実験用
   //論理シミュレーション時コメントアウト
+  /*
   ram8x2048_DE2  ram8x2048a(clock_ram, ram_addr, ram_write_enable,
                             ram_write_data, ram_read_data,
                             key_ram_addr, key_ram_wdata, key_ram_wen);
+                            */
+
 
 // 実験 9 のヒント（１）：ALU モジュールの実体化に関する記述の変更
 // 　　   clock, reset 信号の追加、乗算結果を保持するレジスタ hi と lo 用
