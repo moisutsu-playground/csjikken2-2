@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_Default
-Thu Oct 24 14:21:19 2019
+Thu Oct 24 15:45:04 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -92,15 +92,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 24 14:21:19 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 24 15:45:04 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_Default                                 ;
 ; Top-level Entity Name              ; DE2_115_Default                                 ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 5,112                                           ;
-;     Total combinational functions  ; 3,967                                           ;
-;     Dedicated logic registers      ; 1,720                                           ;
-; Total registers                    ; 1720                                            ;
+; Total logic elements               ; 5,794                                           ;
+;     Total combinational functions  ; 4,290                                           ;
+;     Dedicated logic registers      ; 2,128                                           ;
+; Total registers                    ; 2128                                            ;
 ; Total pins                         ; 480                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 418,390                                         ;
@@ -208,88 +208,87 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; VGA_CHAR_Ctrl.v                  ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_CHAR_Ctrl.v                 ;         ;
-; VGA_CHAR_Ctrl_UpdateMONITOR.v    ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_CHAR_Ctrl_UpdateMONITOR.v   ;         ;
-; V/LCD_Controller.v               ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/LCD_Controller.v              ;         ;
-; V/I2C_Controller.v               ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/I2C_Controller.v              ;         ;
-; V/SEG7_LUT.v                     ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/SEG7_LUT.v                    ;         ;
-; V/LCD_TEST.v                     ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/LCD_TEST.v                    ;         ;
-; V/I2C_AV_Config.v                ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/I2C_AV_Config.v               ;         ;
-; V/SEG7_LUT_8.v                   ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/SEG7_LUT_8.v                  ;         ;
-; V/AUDIO_DAC.v                    ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/AUDIO_DAC.v                   ;         ;
-; V/VGA_Audio_PLL.v                ; yes             ; User Wizard-Generated File             ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/VGA_Audio_PLL.v               ;         ;
-; V/Reset_Delay.v                  ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/Reset_Delay.v                 ;         ;
-; MIPS/cpu.v                       ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/cpu.v                      ;         ;
-; VGA_Controller/Img_RAM.v         ; yes             ; User Wizard-Generated File             ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_Controller/Img_RAM.v        ;         ;
-; VGA_Controller/VGA_Controller.v  ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_Controller/VGA_Controller.v ;         ;
-; VGA_Controller/VGA_OSD_RAM.v     ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_Controller/VGA_OSD_RAM.v    ;         ;
-; VGA_CHAR_RAM.v                   ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_CHAR_RAM.v                  ;         ;
-; char30x40_ram.v                  ; yes             ; User Wizard-Generated File             ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/char30x40_ram.v                 ;         ;
-; KEYBOARD_DEC.v                   ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/KEYBOARD_DEC.v                  ;         ;
-; DE2_115_Default.v                ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/DE2_115_Default.v               ;         ;
-; MIPS/rom8x1024_DE2.v             ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/rom8x1024_DE2.v            ;         ;
-; MIPS/ram8x2048_DE2.v             ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/ram8x2048_DE2.v            ;         ;
-; MIPS/alu.v                       ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/alu.v                      ;         ;
-; MIPS/pc.v                        ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/pc.v                       ;         ;
-; MIPS/registers.v                 ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/registers.v                ;         ;
-; MIPS/plus4.v                     ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/plus4.v                    ;         ;
-; MIPS/adder32.v                   ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/adder32.v                  ;         ;
-; MIPS/mux32_32_32.v               ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/mux32_32_32.v              ;         ;
-; MIPS/mux5_5_5.v                  ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/mux5_5_5.v                 ;         ;
-; MIPS/main_ctrl.v                 ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/main_ctrl.v                ;         ;
-; MIPS/alu_ctrler.v                ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/alu_ctrler.v               ;         ;
-; MIPS/shifter32_32_l2.v           ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/shifter32_32_l2.v          ;         ;
-; MIPS/signext16_32.v              ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/signext16_32.v             ;         ;
-; MIPS/is_branch.v                 ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/MIPS/is_branch.v                ;         ;
-; VGA_Controller/VGA_Param.h       ; yes             ; Auto-Found Unspecified File            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_Controller/VGA_Param.h      ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc            ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc           ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc         ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc         ;         ;
-; db/altpll_k3n2.tdf               ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altpll_k3n2.tdf              ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf            ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc     ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc               ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc            ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc             ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc              ;         ;
-; db/altsyncram_cco1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_cco1.tdf          ;         ;
-; VGA_Controller/Img_DATA.hex      ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_Controller/Img_DATA.hex     ;         ;
-; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/decode_hua.tdf               ;         ;
-; db/decode_aaa.tdf                ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/decode_aaa.tdf               ;         ;
-; db/mux_1pb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/mux_1pb.tdf                  ;         ;
-; lpm_rom.tdf                      ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_rom.tdf               ;         ;
-; altrom.tdf                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altrom.tdf                ;         ;
-; memmodes.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/others/maxplus2/memmodes.inc            ;         ;
-; altsyncram.inc                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.inc            ;         ;
-; db/altsyncram_na01.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_na01.tdf          ;         ;
-; scancode.mif                     ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/scancode.mif                    ;         ;
-; db/altsyncram_e9b1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_e9b1.tdf          ;         ;
-; char30x40_ram.mif                ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/char30x40_ram.mif               ;         ;
-; db/altsyncram_b801.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_b801.tdf          ;         ;
-; bmpfont.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/bmpfont.mif                     ;         ;
-; db/altsyncram_ol01.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_ol01.tdf          ;         ;
-; rom8x1024_DE2.mif                ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/rom8x1024_DE2.mif               ;         ;
-; db/altsyncram_28b1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_28b1.tdf          ;         ;
-; altshift_taps.tdf                ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf         ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc           ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc           ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc          ;         ;
-; db/shift_taps_gkm.tdf            ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/shift_taps_gkm.tdf           ;         ;
-; db/altsyncram_5961.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/altsyncram_5961.tdf          ;         ;
-; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/add_sub_24e.tdf              ;         ;
-; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/cntr_6pf.tdf                 ;         ;
-; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/cmpr_ogc.tdf                 ;         ;
-; db/cntr_p8h.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/db/cntr_p8h.tdf                 ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; VGA_CHAR_Ctrl.v                  ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_CHAR_Ctrl.v                 ;         ;
+; VGA_CHAR_Ctrl_UpdateMONITOR.v    ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_CHAR_Ctrl_UpdateMONITOR.v   ;         ;
+; V/LCD_Controller.v               ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/LCD_Controller.v              ;         ;
+; V/I2C_Controller.v               ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/I2C_Controller.v              ;         ;
+; V/SEG7_LUT.v                     ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/SEG7_LUT.v                    ;         ;
+; V/LCD_TEST.v                     ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/LCD_TEST.v                    ;         ;
+; V/I2C_AV_Config.v                ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/I2C_AV_Config.v               ;         ;
+; V/SEG7_LUT_8.v                   ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/SEG7_LUT_8.v                  ;         ;
+; V/AUDIO_DAC.v                    ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/AUDIO_DAC.v                   ;         ;
+; V/VGA_Audio_PLL.v                ; yes             ; User Wizard-Generated File             ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/VGA_Audio_PLL.v               ;         ;
+; V/Reset_Delay.v                  ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/Reset_Delay.v                 ;         ;
+; MIPS/cpu.v                       ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/cpu.v                      ;         ;
+; VGA_Controller/Img_RAM.v         ; yes             ; User Wizard-Generated File             ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_Controller/Img_RAM.v        ;         ;
+; VGA_Controller/VGA_Controller.v  ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_Controller/VGA_Controller.v ;         ;
+; VGA_Controller/VGA_OSD_RAM.v     ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_Controller/VGA_OSD_RAM.v    ;         ;
+; VGA_CHAR_RAM.v                   ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_CHAR_RAM.v                  ;         ;
+; char30x40_ram.v                  ; yes             ; User Wizard-Generated File             ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/char30x40_ram.v                 ;         ;
+; KEYBOARD_DEC.v                   ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/KEYBOARD_DEC.v                  ;         ;
+; DE2_115_Default.v                ; yes             ; User Verilog HDL File                  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/DE2_115_Default.v               ;         ;
+; MIPS/rom8x1024_DE2.v             ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/rom8x1024_DE2.v            ;         ;
+; MIPS/ram8x2048_DE2.v             ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/ram8x2048_DE2.v            ;         ;
+; MIPS/alu.v                       ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/alu.v                      ;         ;
+; MIPS/pc.v                        ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/pc.v                       ;         ;
+; MIPS/registers.v                 ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/registers.v                ;         ;
+; MIPS/plus4.v                     ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/plus4.v                    ;         ;
+; MIPS/adder32.v                   ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/adder32.v                  ;         ;
+; MIPS/mux32_32_32.v               ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/mux32_32_32.v              ;         ;
+; MIPS/mux5_5_5.v                  ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/mux5_5_5.v                 ;         ;
+; MIPS/main_ctrl.v                 ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/main_ctrl.v                ;         ;
+; MIPS/alu_ctrler.v                ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/alu_ctrler.v               ;         ;
+; MIPS/shifter32_32_l2.v           ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/shifter32_32_l2.v          ;         ;
+; MIPS/signext16_32.v              ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/signext16_32.v             ;         ;
+; MIPS/is_branch.v                 ; yes             ; Auto-Found Verilog HDL File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/MIPS/is_branch.v                ;         ;
+; VGA_Controller/VGA_Param.h       ; yes             ; Auto-Found Unspecified File            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_Controller/VGA_Param.h      ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                       ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                   ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                  ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                ;         ;
+; db/altpll_k3n2.tdf               ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altpll_k3n2.tdf              ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_cco1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_cco1.tdf          ;         ;
+; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/decode_hua.tdf               ;         ;
+; db/decode_aaa.tdf                ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/decode_aaa.tdf               ;         ;
+; db/mux_1pb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/mux_1pb.tdf                  ;         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_rom.tdf                      ;         ;
+; altrom.tdf                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altrom.tdf                       ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/others/maxplus2/memmodes.inc                   ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.inc                   ;         ;
+; db/altsyncram_na01.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_na01.tdf          ;         ;
+; scancode.mif                     ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/scancode.mif                    ;         ;
+; db/altsyncram_e9b1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_e9b1.tdf          ;         ;
+; char30x40_ram.mif                ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/char30x40_ram.mif               ;         ;
+; db/altsyncram_b801.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_b801.tdf          ;         ;
+; bmpfont.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/bmpfont.mif                     ;         ;
+; db/altsyncram_ol01.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_ol01.tdf          ;         ;
+; rom8x1024_DE2.mif                ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/rom8x1024_DE2.mif               ;         ;
+; db/altsyncram_28b1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_28b1.tdf          ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf                ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                  ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                  ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                 ;         ;
+; db/shift_taps_gkm.tdf            ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/shift_taps_gkm.tdf           ;         ;
+; db/altsyncram_5961.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/altsyncram_5961.tdf          ;         ;
+; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/add_sub_24e.tdf              ;         ;
+; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/cntr_6pf.tdf                 ;         ;
+; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/cmpr_ogc.tdf                 ;         ;
+; db/cntr_p8h.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/db/cntr_p8h.tdf                 ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -297,20 +296,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 5,112        ;
+; Estimated Total logic elements              ; 5,794        ;
 ;                                             ;              ;
-; Total combinational functions               ; 3967         ;
+; Total combinational functions               ; 4290         ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 2971         ;
-;     -- 3 input functions                    ; 584          ;
-;     -- <=2 input functions                  ; 412          ;
+;     -- 4 input functions                    ; 3233         ;
+;     -- 3 input functions                    ; 626          ;
+;     -- <=2 input functions                  ; 431          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 3558         ;
-;     -- arithmetic mode                      ; 409          ;
+;     -- normal mode                          ; 3876         ;
+;     -- arithmetic mode                      ; 414          ;
 ;                                             ;              ;
-; Total registers                             ; 1720         ;
-;     -- Dedicated logic registers            ; 1720         ;
+; Total registers                             ; 2128         ;
+;     -- Dedicated logic registers            ; 2128         ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 480          ;
@@ -320,9 +319,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[2]~input ;
-; Maximum fan-out                             ; 1493         ;
-; Total fan-out                               ; 23771        ;
-; Average fan-out                             ; 3.43         ;
+; Maximum fan-out                             ; 1870         ;
+; Total fan-out                               ; 26672        ;
+; Average fan-out                             ; 3.48         ;
 +---------------------------------------------+--------------+
 
 
@@ -331,10 +330,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_115_Default                                   ; 3967 (32)         ; 1720 (30)    ; 418390      ; 0            ; 0       ; 0         ; 480  ; 0            ; |DE2_115_Default                                                                                                                           ; work         ;
+; |DE2_115_Default                                   ; 4290 (34)         ; 2128 (62)    ; 418390      ; 0            ; 0       ; 0         ; 480  ; 0            ; |DE2_115_Default                                                                                                                           ; work         ;
 ;    |AUDIO_DAC:u4|                                  ; 102 (102)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|AUDIO_DAC:u4                                                                                                              ; work         ;
-;    |I2C_AV_Config:u3|                              ; 133 (85)          ; 75 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3                                                                                                          ; work         ;
-;       |I2C_Controller:u0|                          ; 48 (48)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0                                                                                        ; work         ;
+;    |I2C_AV_Config:u3|                              ; 134 (85)          ; 75 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3                                                                                                          ; work         ;
+;       |I2C_Controller:u0|                          ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0                                                                                        ; work         ;
 ;    |KEYBOARD_DEC:u6|                               ; 67 (67)           ; 33 (33)      ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6                                                                                                           ; work         ;
 ;       |lpm_rom:lpm_rom_component|                  ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component                                                                                 ; work         ;
 ;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom                                                                     ; work         ;
@@ -353,7 +352,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |VGA_Audio_PLL:p1|                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1                                                                                                          ; work         ;
 ;       |altpll:altpll_component|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                  ; work         ;
 ;          |altpll_k3n2:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component|altpll_k3n2:auto_generated                                                       ; work         ;
-;    |VGA_CHAR_Ctrl:u8|                              ; 396 (396)         ; 342 (342)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_Ctrl:u8                                                                                                          ; work         ;
+;    |VGA_CHAR_Ctrl:u8|                              ; 669 (669)         ; 718 (718)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_Ctrl:u8                                                                                                          ; work         ;
 ;    |VGA_CHAR_RAM:u7|                               ; 42 (42)           ; 6 (6)        ; 11296       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7                                                                                                           ; work         ;
 ;       |char30x40_ram:char30x40_ram_component|      ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component                                                                     ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component                                     ; work         ;
@@ -362,7 +361,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom                                                                     ; work         ;
 ;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                                ; work         ;
 ;                |altsyncram_b801:auto_generated|    ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_b801:auto_generated                 ; work         ;
-;    |VGA_Controller:u1|                             ; 103 (103)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Controller:u1                                                                                                         ; work         ;
+;    |VGA_Controller:u1|                             ; 104 (104)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Controller:u1                                                                                                         ; work         ;
 ;    |VGA_OSD_RAM:u2|                                ; 338 (8)           ; 28 (10)      ; 307254      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2                                                                                                            ; work         ;
 ;       |Img_RAM:u0|                                 ; 321 (0)           ; 12 (0)       ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0                                                                                                 ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 321 (0)           ; 12 (0)       ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component                                                                 ; work         ;
@@ -375,28 +374,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_5961:altsyncram4|          ; 0 (0)             ; 0 (0)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|altsyncram_5961:altsyncram4                    ; work         ;
 ;             |cntr_6pf:cntr1|                       ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_6pf:cntr1                                 ; work         ;
 ;             |cntr_p8h:cntr5|                       ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_p8h:cntr5                                 ; work         ;
-;    |cpu:u9|                                        ; 2497 (64)         ; 1047 (25)    ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9                                                                                                                    ; work         ;
-;       |alu:alua|                                   ; 879 (879)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua                                                                                                           ; work         ;
+;    |cpu:u9|                                        ; 2540 (68)         ; 1047 (25)    ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9                                                                                                                    ; work         ;
+;       |alu:alua|                                   ; 883 (883)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua                                                                                                           ; work         ;
 ;       |alu_ctrler:alu_ctrlera|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu_ctrler:alu_ctrlera                                                                                             ; work         ;
 ;       |is_branch:is_brancha|                       ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|is_branch:is_brancha                                                                                               ; work         ;
-;       |main_ctrl:main_ctrla|                       ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla                                                                                               ; work         ;
+;       |main_ctrl:main_ctrla|                       ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla                                                                                               ; work         ;
 ;       |mux32_32_32:alu_a_sel_1|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_a_sel_1                                                                                            ; work         ;
-;       |mux32_32_32:alu_b_sel_2|                    ; 54 (54)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2                                                                                            ; work         ;
+;       |mux32_32_32:alu_b_sel_2|                    ; 51 (51)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2                                                                                            ; work         ;
 ;       |mux32_32_32:link_sel|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel                                                                                               ; work         ;
 ;       |mux5_5_5:reg_widx_sel2|                     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2                                                                                             ; work         ;
 ;       |pc:pca|                                     ; 30 (30)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|pc:pca                                                                                                             ; work         ;
 ;       |plus4:pc_plus4|                             ; 31 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|plus4:pc_plus4                                                                                                     ; work         ;
-;       |ram8x2048_DE2:ram8x2048a|                   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a                                                                                           ; work         ;
+;       |ram8x2048_DE2:ram8x2048a|                   ; 33 (33)           ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a                                                                                           ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component                                                           ; work         ;
 ;             |altsyncram_28b1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component|altsyncram_28b1:auto_generated                            ; work         ;
-;       |registers:register_file|                    ; 1327 (1327)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|registers:register_file                                                                                            ; work         ;
+;       |registers:register_file|                    ; 1328 (1328)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|registers:register_file                                                                                            ; work         ;
 ;       |rom8x1024_DE2:rom8x1024a|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a                                                                                           ; work         ;
 ;          |lpm_rom:lpm_rom_component|               ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component                                                                 ; work         ;
 ;             |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom                                                     ; work         ;
 ;                |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                ; work         ;
 ;                   |altsyncram_ol01:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated ; work         ;
-;       |signext16_32:signext16_32a|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|signext16_32:signext16_32a                                                                                         ; work         ;
-;    |update_monitor_rom:update_rom|                 ; 94 (94)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|update_monitor_rom:update_rom                                                                                             ; work         ;
+;       |signext16_32:signext16_32a|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|signext16_32:signext16_32a                                                                                         ; work         ;
+;    |update_monitor_rom:update_rom|                 ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|update_monitor_rom:update_rom                                                                                             ; work         ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -416,15 +415,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+-------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                        ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                        ; IP Include File                                                                     ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |DE2_115_Default|VGA_Audio_PLL:p1                                      ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/V/VGA_Audio_PLL.v        ;
-; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0                             ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/VGA_Controller/Img_RAM.v ;
-; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component ; /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/char30x40_ram.v          ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                        ; IP Include File                                                                            ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |DE2_115_Default|VGA_Audio_PLL:p1                                      ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/V/VGA_Audio_PLL.v        ;
+; Altera ; RAM: 2-PORT  ; N/A     ; N/A          ; N/A          ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0                             ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/VGA_Controller/Img_RAM.v ;
+; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component ; /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/char30x40_ram.v          ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -494,8 +493,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+-------------------------------------------------------+
 ; Register name                                      ; Reason for Removal                                    ;
 +----------------------------------------------------+-------------------------------------------------------+
-; gpio_reg[0..35]                                    ; Stuck at GND due to stuck port clock_enable           ;
-; VGA_CHAR_Ctrl:u8|iRAM_WEN_reg                      ; Stuck at GND due to stuck port data_in                ;
+; gpio_reg[32..35]                                   ; Stuck at GND due to stuck port data_in                ;
 ; VGA_CHAR_Ctrl:u8|iROMmonitorRDAT_reg[10,11]        ; Stuck at GND due to stuck port data_in                ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[0..15]                  ; Stuck at GND due to stuck port data_in                ;
 ; AUDIO_DAC:u4|FLASH_Out[0..15]                      ; Stuck at GND due to stuck port data_in                ;
@@ -545,130 +543,6 @@ Encoding Type:  One-Hot
 ; VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[0..3,5..7,10..12]    ; Stuck at GND due to stuck port data_in                ;
 ; I2C_AV_Config:u3|mI2C_DATA[16,17,19,23]            ; Stuck at GND due to stuck port data_in                ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[7,23]             ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[23]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[31]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[23]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[31]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[15]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[15]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[31]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[3,15]    ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[15]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[3]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[27]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[19]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[19]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[27]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[11]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[27]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[3]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[19]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[27]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[11]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[19]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[11]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[3,11]     ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[5]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[1]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[30]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[29]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[1]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[25]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[29]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[21]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[29]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[17]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[17]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[13]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[25]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[9]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_ascii_reg[1]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[5]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[21]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[1]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[13]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[29]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[17]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[25]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[25]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[21]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[13]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[17]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[9]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[13]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[9]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[5,9]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[5]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[1]        ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[4,22]            ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[0]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[21]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[30]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[2]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[28]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[20]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[26]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[0]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[24]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_ascii_reg[4]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[22]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[30]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[20]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[18]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[18]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[28]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[16]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[28]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[14]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[26]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[12]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[16]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[10]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[24]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[8]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[2]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[6]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[22]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[4]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[14]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[2]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[20]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|scan_stroke_reg[0]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[26]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[30]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[18]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[28]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[12]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[26]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[16]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[24]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_ascii_reg[0]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[22]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[14]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[20]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[10]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[18]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[12]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[16]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[24]              ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[14]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[10]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[12]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[8]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[10]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[8]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[6,8]      ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[6]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[4]        ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[6]               ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[2]        ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[4]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[0]        ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_ascii_reg[2]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|print_stroke_reg[7,23,31]         ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_print_stroke_reg[7]       ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
-; VGA_CHAR_Ctrl:u8|current_scan_stroke_reg[7]        ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[3]       ;
 ; VGA_OSD_RAM:u2|WR_ADDR_d[2]                        ; Merged with VGA_CHAR_RAM:u7|pixel_sel_d[1]            ;
 ; VGA_OSD_RAM:u2|WR_ADDR_d[1]                        ; Merged with VGA_CHAR_RAM:u7|pixel_sel_d[0]            ;
 ; VGA_OSD_RAM:u2|WR_ADDR_dd[2]                       ; Merged with VGA_CHAR_RAM:u7|pixel_sel_dd[1]           ;
@@ -676,7 +550,6 @@ Encoding Type:  One-Hot
 ; VGA_OSD_RAM:u2|oGreen[0..7]                        ; Merged with VGA_OSD_RAM:u2|oRed[7]                    ;
 ; VGA_OSD_RAM:u2|oBlue[0..7]                         ; Merged with VGA_OSD_RAM:u2|oRed[7]                    ;
 ; VGA_CHAR_RAM:u7|pixel_sel_dd[0]                    ; Merged with VGA_OSD_RAM:u2|WR_ADDR_dd[1]              ;
-; VGA_CHAR_Ctrl:u8|print_ascii_reg[3]                ; Merged with VGA_CHAR_Ctrl:u8|print_ascii_reg[5]       ;
 ; cpu:u9|pc:pca|pc_reg[1]                            ; Merged with cpu:u9|pc:pca|pc_reg[0]                   ;
 ; VGA_CHAR_Ctrl:u8|iPC_reg[1]                        ; Merged with VGA_CHAR_Ctrl:u8|iPC_reg[0]               ;
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[12]                 ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[12]           ;
@@ -699,7 +572,6 @@ Encoding Type:  One-Hot
 ; VGA_CHAR_Ctrl:u8|RAM_WEN_reg                       ; Merged with VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[4]          ;
 ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[8,9,11..31]         ; Merged with VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[10]        ;
 ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[7]                  ; Merged with VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[6]         ;
-; VGA_CHAR_Ctrl:u8|scan_req_reg[1..31]               ; Merged with VGA_CHAR_Ctrl:u8|scan_req_reg[0]          ;
 ; I2C_AV_Config:u3|mI2C_DATA[20,21]                  ; Merged with I2C_AV_Config:u3|mI2C_DATA[18]            ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD[20,21]       ; Merged with I2C_AV_Config:u3|I2C_Controller:u0|SD[18] ;
 ; VGA_Controller:u1|Cur_Color_B[1..7]                ; Merged with VGA_Controller:u1|Cur_Color_B[0]          ;
@@ -742,10 +614,6 @@ Encoding Type:  One-Hot
 ; VGA_CHAR_Ctrl:u8|PC_reg[0]                         ; Stuck at GND due to stuck port data_in                ;
 ; VGA_CHAR_Ctrl:u8|iPCd_reg[0]                       ; Stuck at GND due to stuck port data_in                ;
 ; VGA_CHAR_Ctrl:u8|iPCdd_reg[0]                      ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|print_ascii_reg[5]                ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|scan_req_reg[0]                   ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[4]                   ; Stuck at GND due to stuck port clock_enable           ;
-; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[0..6,10]            ; Stuck at GND due to stuck port clock_enable           ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg~9                     ; Lost fanout                                           ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg~10                    ; Lost fanout                                           ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg~11                    ; Lost fanout                                           ;
@@ -762,13 +630,11 @@ Encoding Type:  One-Hot
 ; LCD_TEST:u5|LCD_Controller:u0|ST~9                 ; Lost fanout                                           ;
 ; I2C_AV_Config:u3|mSetup_ST~9                       ; Lost fanout                                           ;
 ; I2C_AV_Config:u3|mSetup_ST~10                      ; Lost fanout                                           ;
-; VGA_CHAR_Ctrl:u8|scan_st_reg.01                    ; Lost fanout                                           ;
-; VGA_CHAR_Ctrl:u8|scan_st_reg.10                    ; Lost fanout                                           ;
-; VGA_CHAR_Ctrl:u8|scan_st_reg.00                    ; Lost fanout                                           ;
+; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[6]                  ; Merged with VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[10]        ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg.00000000              ; Lost fanout                                           ;
 ; Cont[27..31]                                       ; Lost fanout                                           ;
 ; AUDIO_DAC:u4|BCK_DIV[3]                            ; Stuck at GND due to stuck port data_in                ;
-; Total Number of Removed Registers = 595            ;                                                       ;
+; Total Number of Removed Registers = 385            ;                                                       ;
 +----------------------------------------------------+-------------------------------------------------------+
 
 
@@ -777,14 +643,10 @@ Encoding Type:  One-Hot
 +--------------------------------+---------------------------+-------------------------------------------------------------------------+
 ; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                                  ;
 +--------------------------------+---------------------------+-------------------------------------------------------------------------+
-; cpu:u9|pc:pca|pc_reg[0]        ; Stuck at GND              ; VGA_CHAR_Ctrl:u8|iPC_reg[0], VGA_CHAR_Ctrl:u8|PC_reg[0],                ;
-;                                ; due to stuck port data_in ; VGA_CHAR_Ctrl:u8|iPCd_reg[0], VGA_CHAR_Ctrl:u8|iPCdd_reg[0],            ;
-;                                ;                           ; VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[4], VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[10],   ;
-;                                ;                           ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[5], VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[4],   ;
-;                                ;                           ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[3], VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[2],   ;
-;                                ;                           ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[1], VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[0]    ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[15] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[15], AUDIO_DAC:u4|LRCK_2X, AUDIO_DAC:u4|LRCK_4X, ;
 ;                                ; due to stuck port data_in ; AUDIO_DAC:u4|FLASH_Cont[0]                                              ;
+; cpu:u9|pc:pca|pc_reg[0]        ; Stuck at GND              ; VGA_CHAR_Ctrl:u8|iPC_reg[0], VGA_CHAR_Ctrl:u8|PC_reg[0],                ;
+;                                ; due to stuck port data_in ; VGA_CHAR_Ctrl:u8|iPCd_reg[0], VGA_CHAR_Ctrl:u8|iPCdd_reg[0]             ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[13] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[13]                                              ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[12] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[12]                                              ;
@@ -861,9 +723,9 @@ Encoding Type:  One-Hot
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[8]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[8]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|SRAM_Out_Tmp[7]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[7]                                                ;
-;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[14] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[14]                                              ;
+;                                ; due to stuck port data_in ;                                                                         ;
+; AUDIO_DAC:u4|SRAM_Out_Tmp[6]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[6]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[5]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[5]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
@@ -873,11 +735,9 @@ Encoding Type:  One-Hot
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[2]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[2]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|SRAM_Out_Tmp[1]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[1]                                                ;
+; AUDIO_DAC:u4|SRAM_Out_Tmp[7]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[7]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|SRAM_Out_Tmp[6]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[6]                                                ;
-;                                ; due to stuck port data_in ;                                                                         ;
-; VGA_CHAR_Ctrl:u8|regs_00[6]    ; Stuck at GND              ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[6]                                       ;
+; AUDIO_DAC:u4|SRAM_Out_Tmp[0]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[0]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; I2C_AV_Config:u3|mI2C_DATA[23] ; Stuck at GND              ; I2C_AV_Config:u3|I2C_Controller:u0|SD[23]                               ;
 ;                                ; due to stuck port data_in ;                                                                         ;
@@ -887,7 +747,7 @@ Encoding Type:  One-Hot
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; I2C_AV_Config:u3|mI2C_DATA[16] ; Stuck at GND              ; I2C_AV_Config:u3|I2C_Controller:u0|SD[16]                               ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|SRAM_Out_Tmp[0]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[0]                                                ;
+; AUDIO_DAC:u4|SRAM_Out_Tmp[1]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[1]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 +--------------------------------+---------------------------+-------------------------------------------------------------------------+
 
@@ -897,12 +757,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1720  ;
-; Number of registers using Synchronous Clear  ; 109   ;
-; Number of registers using Synchronous Load   ; 45    ;
-; Number of registers using Asynchronous Clear ; 1638  ;
+; Total registers                              ; 2128  ;
+; Number of registers using Synchronous Clear  ; 115   ;
+; Number of registers using Synchronous Load   ; 57    ;
+; Number of registers using Asynchronous Clear ; 2014  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1226  ;
+; Number of registers using Clock Enable       ; 1631  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -912,14 +772,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                ; Fan out ;
 +----------------------------------------------------------------------------------+---------+
-; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[0]                                 ; 19      ;
-; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[2]                                 ; 16      ;
-; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[3]                                 ; 22      ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[0]                                 ; 18      ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[2]                                 ; 17      ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[3]                                 ; 21      ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[1]                                 ; 17      ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[4]                                 ; 12      ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[5]                                 ; 11      ;
 ; cpu:u9|pc:pca|pc_reg[22]                                                         ; 2       ;
-; I2C_AV_Config:u3|I2C_Controller:u0|SCLK                                          ; 2       ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SCLK                                          ; 3       ;
 ; VGA_CHAR_Ctrl:u8|KeyCurrentPosRow_reg[3]                                         ; 1       ;
 ; VGA_CHAR_Ctrl:u8|KeyCurrentPosRow_reg[2]                                         ; 1       ;
 ; VGA_CHAR_Ctrl:u8|KeyCurrentPosRow_reg[1]                                         ; 1       ;
@@ -950,29 +810,31 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|mStart             ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_reg[1]                 ;
-; 37:1               ; 5 bits    ; 120 LEs       ; 50 LEs               ; 70 LEs                 ; Yes        ; |DE2_115_Default|KEYBOARD_DEC:u6|key_ascii_reg[2]                 ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 24 LEs               ; 30 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosCol_reg[5]            ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[4]            ;
-; 15:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[2]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|oDone              ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_reg[4]                 ;
+; 37:1               ; 5 bits    ; 120 LEs       ; 50 LEs               ; 70 LEs                 ; Yes        ; |DE2_115_Default|KEYBOARD_DEC:u6|key_ascii_reg[4]                 ;
+; 67:1               ; 6 bits    ; 264 LEs       ; 132 LEs              ; 132 LEs                ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[4]                ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 12 LEs               ; 30 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|reg_idx[2]                      ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosCol_reg[1]            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[3]            ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[0]            ;
 ; 84:1               ; 2 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_src_tmp[2]             ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[5] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[0] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|main_st_reg                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2|y[14]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2|y[12]             ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[13]           ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2|y[2]               ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2|y[0]               ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[7]            ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data1[0] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data2[3] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data1[5] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data2[4] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DE2_115_Default|LCD_TEST:u5|mLCD_ST                              ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|scan_st_reg                     ;
 ; 22:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux44                            ;
-; 21:1               ; 7 bits    ; 98 LEs        ; 56 LEs               ; 42 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux49                            ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux36                            ;
-; 22:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux54                            ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux32                            ;
+; 21:1               ; 7 bits    ; 98 LEs        ; 56 LEs               ; 42 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux51                            ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux34                            ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux55                            ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux33                            ;
 ; 23:1               ; 2 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux59                            ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|scan_st_reg                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -2021,7 +1883,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -2031,7 +1893,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 24 14:20:51 2019
+    Info: Processing started: Thu Oct 24 15:44:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115_Default -c DE2_115_Default
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file VGA_CHAR_Ctrl.v
@@ -2233,7 +2095,6 @@ Info (12128): Elaborating entity "VGA_OSD_RAM" for hierarchy "VGA_OSD_RAM:u2"
 Warning (10036): Verilog HDL or VHDL warning at VGA_OSD_RAM.v(48): object "WR_ADDR_ddddd" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at VGA_OSD_RAM.v(53): object "Wen_ddddd" assigned a value but never read
 Info (12128): Elaborating entity "Img_RAM" for hierarchy "VGA_OSD_RAM:u2|Img_RAM:u0"
-Warning (272007): Device family Cyclone IV E does not have M4K blocks -- using available memory blocks
 Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component"
 Info (12133): Instantiated megafunction "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component" with the following parameter:
@@ -2261,7 +2122,6 @@ Warning (287001): Assertion warning: Device family Cyclone IV E does not have M4
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cco1.tdf
     Info (12023): Found entity 1: altsyncram_cco1
 Info (12128): Elaborating entity "altsyncram_cco1" for hierarchy "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated"
-Warning (113007): Byte addressed memory initialization file "Img_DATA.hex" was read in the word-addressed format
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_hua.tdf
     Info (12023): Found entity 1: decode_hua
 Info (12128): Elaborating entity "decode_hua" for hierarchy "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|decode_hua:decode2"
@@ -2314,17 +2174,6 @@ Info (12131): Elaborated megafunction instantiation "KEYBOARD_DEC:u6|lpm_rom:lpm
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_na01.tdf
     Info (12023): Found entity 1: altsyncram_na01
 Info (12128): Elaborating entity "altsyncram_na01" for hierarchy "KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_na01:auto_generated"
-Warning (113031): 46 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 46 warnings found, and 10 warnings are reported.
-    Warning (113030): Memory Initialization File address 14 is reinitialized
-    Warning (113030): Memory Initialization File address 22 is reinitialized
-    Warning (113030): Memory Initialization File address 30 is reinitialized
-    Warning (113030): Memory Initialization File address 38 is reinitialized
-    Warning (113030): Memory Initialization File address 37 is reinitialized
-    Warning (113030): Memory Initialization File address 46 is reinitialized
-    Warning (113030): Memory Initialization File address 54 is reinitialized
-    Warning (113030): Memory Initialization File address 61 is reinitialized
-    Warning (113030): Memory Initialization File address 62 is reinitialized
-    Warning (113030): Memory Initialization File address 70 is reinitialized
 Info (12128): Elaborating entity "VGA_CHAR_RAM" for hierarchy "VGA_CHAR_RAM:u7"
 Warning (10230): Verilog HDL assignment warning at VGA_CHAR_RAM.v(41): truncated value with size 32 to match size of target (11)
 Info (12128): Elaborating entity "char30x40_ram" for hierarchy "VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component"
@@ -2427,17 +2276,6 @@ Info (12131): Elaborated megafunction instantiation "cpu:u9|rom8x1024_DE2:rom8x1
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ol01.tdf
     Info (12023): Found entity 1: altsyncram_ol01
 Info (12128): Elaborating entity "altsyncram_ol01" for hierarchy "cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated"
-Warning (113031): 24 out of 1024 addresses are reinitialized. The latest initialized data will replace the existing data. There are 24 warnings found, and 10 warnings are reported.
-    Warning (113030): Memory Initialization File address 0 is reinitialized
-    Warning (113030): Memory Initialization File address 1 is reinitialized
-    Warning (113030): Memory Initialization File address 2 is reinitialized
-    Warning (113030): Memory Initialization File address 3 is reinitialized
-    Warning (113030): Memory Initialization File address 4 is reinitialized
-    Warning (113030): Memory Initialization File address 5 is reinitialized
-    Warning (113030): Memory Initialization File address 6 is reinitialized
-    Warning (113030): Memory Initialization File address 7 is reinitialized
-    Warning (113030): Memory Initialization File address 8 is reinitialized
-    Warning (113030): Memory Initialization File address 9 is reinitialized
 Info (12128): Elaborating entity "ram8x2048_DE2" for hierarchy "cpu:u9|ram8x2048_DE2:ram8x2048a"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component"
@@ -2458,7 +2296,6 @@ Info (12133): Instantiated megafunction "cpu:u9|ram8x2048_DE2:ram8x2048a|altsync
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_28b1.tdf
     Info (12023): Found entity 1: altsyncram_28b1
 Info (12128): Elaborating entity "altsyncram_28b1" for hierarchy "cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component|altsyncram_28b1:auto_generated"
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/ram8x2048_DE2.mif -- setting all initial values to 0
 Info (12128): Elaborating entity "alu" for hierarchy "cpu:u9|alu:alua"
 Info (12128): Elaborating entity "pc" for hierarchy "cpu:u9|pc:pca"
 Info (12128): Elaborating entity "registers" for hierarchy "cpu:u9|registers:register_file"
@@ -2475,38 +2312,27 @@ Warning (10036): Verilog HDL or VHDL warning at main_ctrl.v(262): object "Irs" a
 Warning (10036): Verilog HDL or VHDL warning at main_ctrl.v(263): object "Irt" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at main_ctrl.v(264): object "Iaddr" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at main_ctrl.v(270): object "Jaddr" assigned a value but never read
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(322): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(330): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(334): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(340): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(347): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(348): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(349): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(355): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(427): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(435): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(439): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(445): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(455): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(528): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(536): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(540): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(547): case item expression covers a value already covered by a previous case item
 Warning (10235): Verilog HDL Always Construct warning at main_ctrl.v(566): variable "Rfunc" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(590): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(598): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(602): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(608): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(616): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(633): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(664): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(668): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(676): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(707): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(711): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(719): case item expression covers a value already covered by a previous case item
 Warning (10235): Verilog HDL Always Construct warning at main_ctrl.v(738): variable "Rfunc" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(756): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(760): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(766): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(767): case item expression covers a value already covered by a previous case item
@@ -2606,6 +2432,38 @@ Warning (13034): The following nodes have both tri-state and non-tri-state drive
     Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[7]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "AUD_BCLK" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "AUD_DACLRCK" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[5]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[6]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[7]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[8]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[9]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[10]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[11]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[12]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[13]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[14]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[15]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[16]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[17]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[18]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[19]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[20]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[21]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[22]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[23]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[24]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[25]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[26]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[27]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[28]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[29]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[30]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[31]" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "PS2_CLK" has no driver
     Warning (13040): Bidir "PS2_DAT" has no driver
@@ -2623,38 +2481,6 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "EX_IO[5]" has no driver
     Warning (13040): Bidir "EX_IO[6]" has no driver
 Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO[0]" is fed by GND
-    Warning (13033): The pin "GPIO[1]" is fed by GND
-    Warning (13033): The pin "GPIO[2]" is fed by GND
-    Warning (13033): The pin "GPIO[3]" is fed by GND
-    Warning (13033): The pin "GPIO[4]" is fed by GND
-    Warning (13033): The pin "GPIO[5]" is fed by GND
-    Warning (13033): The pin "GPIO[6]" is fed by GND
-    Warning (13033): The pin "GPIO[7]" is fed by GND
-    Warning (13033): The pin "GPIO[8]" is fed by GND
-    Warning (13033): The pin "GPIO[9]" is fed by GND
-    Warning (13033): The pin "GPIO[10]" is fed by GND
-    Warning (13033): The pin "GPIO[11]" is fed by GND
-    Warning (13033): The pin "GPIO[12]" is fed by GND
-    Warning (13033): The pin "GPIO[13]" is fed by GND
-    Warning (13033): The pin "GPIO[14]" is fed by GND
-    Warning (13033): The pin "GPIO[15]" is fed by GND
-    Warning (13033): The pin "GPIO[16]" is fed by GND
-    Warning (13033): The pin "GPIO[17]" is fed by GND
-    Warning (13033): The pin "GPIO[18]" is fed by GND
-    Warning (13033): The pin "GPIO[19]" is fed by GND
-    Warning (13033): The pin "GPIO[20]" is fed by GND
-    Warning (13033): The pin "GPIO[21]" is fed by GND
-    Warning (13033): The pin "GPIO[22]" is fed by GND
-    Warning (13033): The pin "GPIO[23]" is fed by GND
-    Warning (13033): The pin "GPIO[24]" is fed by GND
-    Warning (13033): The pin "GPIO[25]" is fed by GND
-    Warning (13033): The pin "GPIO[26]" is fed by GND
-    Warning (13033): The pin "GPIO[27]" is fed by GND
-    Warning (13033): The pin "GPIO[28]" is fed by GND
-    Warning (13033): The pin "GPIO[29]" is fed by GND
-    Warning (13033): The pin "GPIO[30]" is fed by GND
-    Warning (13033): The pin "GPIO[31]" is fed by GND
     Warning (13033): The pin "GPIO[32]" is fed by GND
     Warning (13033): The pin "GPIO[33]" is fed by GND
     Warning (13033): The pin "GPIO[34]" is fed by GND
@@ -2763,6 +2589,38 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "AUD_ADCLRCK~synth"
     Warning (13010): Node "AUD_BCLK~synth"
     Warning (13010): Node "AUD_DACLRCK~synth"
+    Warning (13010): Node "GPIO[0]~synth"
+    Warning (13010): Node "GPIO[1]~synth"
+    Warning (13010): Node "GPIO[2]~synth"
+    Warning (13010): Node "GPIO[3]~synth"
+    Warning (13010): Node "GPIO[4]~synth"
+    Warning (13010): Node "GPIO[5]~synth"
+    Warning (13010): Node "GPIO[6]~synth"
+    Warning (13010): Node "GPIO[7]~synth"
+    Warning (13010): Node "GPIO[8]~synth"
+    Warning (13010): Node "GPIO[9]~synth"
+    Warning (13010): Node "GPIO[10]~synth"
+    Warning (13010): Node "GPIO[11]~synth"
+    Warning (13010): Node "GPIO[12]~synth"
+    Warning (13010): Node "GPIO[13]~synth"
+    Warning (13010): Node "GPIO[14]~synth"
+    Warning (13010): Node "GPIO[15]~synth"
+    Warning (13010): Node "GPIO[16]~synth"
+    Warning (13010): Node "GPIO[17]~synth"
+    Warning (13010): Node "GPIO[18]~synth"
+    Warning (13010): Node "GPIO[19]~synth"
+    Warning (13010): Node "GPIO[20]~synth"
+    Warning (13010): Node "GPIO[21]~synth"
+    Warning (13010): Node "GPIO[22]~synth"
+    Warning (13010): Node "GPIO[23]~synth"
+    Warning (13010): Node "GPIO[24]~synth"
+    Warning (13010): Node "GPIO[25]~synth"
+    Warning (13010): Node "GPIO[26]~synth"
+    Warning (13010): Node "GPIO[27]~synth"
+    Warning (13010): Node "GPIO[28]~synth"
+    Warning (13010): Node "GPIO[29]~synth"
+    Warning (13010): Node "GPIO[30]~synth"
+    Warning (13010): Node "GPIO[31]~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SMA_CLKOUT" is stuck at GND
     Warning (13410): Pin "HEX0[5]" is stuck at GND
@@ -2910,8 +2768,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HSMC_TX_D_P[15]" is stuck at GND
     Warning (13410): Pin "HSMC_TX_D_P[16]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 66 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/DE2_115_Default.map.smsg
+Info (17049): 63 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/DE2_115_Default.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15899): PLL "VGA_Audio_PLL:p1|altpll:altpll_component|altpll_k3n2:auto_generated|pll1" has parameters clk2_multiply_by and clk2_divide_by specified but port CLK[2] is not connected
@@ -3000,23 +2858,23 @@ Warning (21074): Design contains 84 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[14]"
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[15]"
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[16]"
-Info (21057): Implemented 5932 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6616 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 91 input pins
     Info (21059): Implemented 248 output pins
     Info (21060): Implemented 141 bidirectional pins
-    Info (21061): Implemented 5311 logic cells
+    Info (21061): Implemented 5995 logic cells
     Info (21064): Implemented 140 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 640 warnings
-    Info: Peak virtual memory: 411 megabytes
-    Info: Processing ended: Thu Oct 24 14:21:19 2019
-    Info: Elapsed time: 00:00:28
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 636 warnings
+    Info: Peak virtual memory: 427 megabytes
+    Info: Processing ended: Thu Oct 24 15:45:04 2019
+    Info: Elapsed time: 00:00:29
     Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /mdhome/home5/uk6057965/csjikken/jikken2/j-1a/mips_de2-115/DE2_115_Default.map.smsg.
+The suppressed messages can be found in /mdhome/home5/uk6057965/csjikken/jikken2/csjikken2-2/mips_de2-115/DE2_115_Default.map.smsg.
 
 
