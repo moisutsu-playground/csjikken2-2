@@ -267,7 +267,10 @@ module cpu (clk, reset,
 //
 //追加設計 5 ヒント(1)：jpr_sel の入出力用ワイヤの宣言
 //
-  wire   [31:0]        jpr_sel;
+  wire   [31:0]     jpr_sel_d0;
+  wire   [31:0]     jpr_sel_d1;
+  wire               jpr_sel_s;
+  wire   [31:0]      jpr_sel_y;
 
   wire   [31:0]    instruction;  // メイン制御回路
   wire              alu_b_sel1;  // メイン制御回路
@@ -404,7 +407,7 @@ module cpu (clk, reset,
 //追加設計 5 ヒント(2)：32-bit, 32-bit 入力, 32-bit 出力のセレクタを実体化
 //
 
-  mux32_32_32 jpr_sel(jpr_sel_d0, jpr_sel_d1, jp_sel_s, jpr_sel_y);
+  mux32_32_32 jpr_sel(jpr_sel_d0, jpr_sel_d1, jpr_sel_s, jpr_sel_y);
 
 
 //
@@ -491,7 +494,7 @@ module cpu (clk, reset,
 //
 //追加設計 2 のヒント(3)：jp_sel の出力 jp_sel_y の pc_next への接続
 //
-  assign pc_next = jp_sel_y;
+  //assign pc_next = jp_sel_y;
 
   assign reg_read_idx1 = instruction[25:21];
   assign reg_read_idx2 = instruction[20:16];
