@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_Default
-Thu Oct 31 14:16:40 2019
+Thu Oct 31 15:50:17 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,23 +50,22 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  42. altsyncram Parameter Settings by Entity Instance
  43. altshift_taps Parameter Settings by Entity Instance
  44. Port Connectivity Checks: "cpu:u9|shifter32_32_l2:shifter32_32_l2b"
- 45. Port Connectivity Checks: "cpu:u9|main_ctrl:main_ctrla"
- 46. Port Connectivity Checks: "cpu:u9|mux5_5_5:reg_widx_sel2"
- 47. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_a_sel_1"
- 48. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_b_sel_2"
- 49. Port Connectivity Checks: "cpu:u9"
- 50. Port Connectivity Checks: "VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component"
- 51. Port Connectivity Checks: "VGA_CHAR_RAM:u7"
- 52. Port Connectivity Checks: "KEYBOARD_DEC:u6"
- 53. Port Connectivity Checks: "AUDIO_DAC:u4"
- 54. Port Connectivity Checks: "I2C_AV_Config:u3|I2C_Controller:u0"
- 55. Port Connectivity Checks: "VGA_OSD_RAM:u2"
- 56. Port Connectivity Checks: "VGA_Controller:u1"
- 57. Port Connectivity Checks: "SEG7_LUT_8:u0"
- 58. Port Connectivity Checks: "VGA_Audio_PLL:p1"
- 59. Elapsed Time Per Partition
- 60. Analysis & Synthesis Messages
- 61. Analysis & Synthesis Suppressed Messages
+ 45. Port Connectivity Checks: "cpu:u9|mux5_5_5:reg_widx_sel2"
+ 46. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_a_sel_1"
+ 47. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_b_sel_2"
+ 48. Port Connectivity Checks: "cpu:u9"
+ 49. Port Connectivity Checks: "VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component"
+ 50. Port Connectivity Checks: "VGA_CHAR_RAM:u7"
+ 51. Port Connectivity Checks: "KEYBOARD_DEC:u6"
+ 52. Port Connectivity Checks: "AUDIO_DAC:u4"
+ 53. Port Connectivity Checks: "I2C_AV_Config:u3|I2C_Controller:u0"
+ 54. Port Connectivity Checks: "VGA_OSD_RAM:u2"
+ 55. Port Connectivity Checks: "VGA_Controller:u1"
+ 56. Port Connectivity Checks: "SEG7_LUT_8:u0"
+ 57. Port Connectivity Checks: "VGA_Audio_PLL:p1"
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
+ 60. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -92,15 +91,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 31 14:16:40 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 31 15:50:17 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_Default                                 ;
 ; Top-level Entity Name              ; DE2_115_Default                                 ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 5,849                                           ;
-;     Total combinational functions  ; 4,345                                           ;
-;     Dedicated logic registers      ; 2,128                                           ;
-; Total registers                    ; 2128                                            ;
+; Total logic elements               ; 5,908                                           ;
+;     Total combinational functions  ; 4,396                                           ;
+;     Dedicated logic registers      ; 2,138                                           ;
+; Total registers                    ; 2138                                            ;
 ; Total pins                         ; 480                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 418,390                                         ;
@@ -296,20 +295,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 5,849        ;
+; Estimated Total logic elements              ; 5,908        ;
 ;                                             ;              ;
-; Total combinational functions               ; 4345         ;
+; Total combinational functions               ; 4396         ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 3225         ;
-;     -- 3 input functions                    ; 703          ;
-;     -- <=2 input functions                  ; 417          ;
+;     -- 4 input functions                    ; 3324         ;
+;     -- 3 input functions                    ; 652          ;
+;     -- <=2 input functions                  ; 420          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 3931         ;
+;     -- normal mode                          ; 3982         ;
 ;     -- arithmetic mode                      ; 414          ;
 ;                                             ;              ;
-; Total registers                             ; 2128         ;
-;     -- Dedicated logic registers            ; 2128         ;
+; Total registers                             ; 2138         ;
+;     -- Dedicated logic registers            ; 2138         ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 480          ;
@@ -319,8 +318,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[2]~input ;
-; Maximum fan-out                             ; 1870         ;
-; Total fan-out                               ; 26834        ;
+; Maximum fan-out                             ; 1880         ;
+; Total fan-out                               ; 27068        ;
 ; Average fan-out                             ; 3.48         ;
 +---------------------------------------------+--------------+
 
@@ -330,11 +329,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_115_Default                                   ; 4345 (34)         ; 2128 (62)    ; 418390      ; 0            ; 0       ; 0         ; 480  ; 0            ; |DE2_115_Default                                                                                                                           ; work         ;
+; |DE2_115_Default                                   ; 4396 (33)         ; 2138 (62)    ; 418390      ; 0            ; 0       ; 0         ; 480  ; 0            ; |DE2_115_Default                                                                                                                           ; work         ;
 ;    |AUDIO_DAC:u4|                                  ; 102 (102)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|AUDIO_DAC:u4                                                                                                              ; work         ;
-;    |I2C_AV_Config:u3|                              ; 134 (85)          ; 75 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3                                                                                                          ; work         ;
-;       |I2C_Controller:u0|                          ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0                                                                                        ; work         ;
-;    |KEYBOARD_DEC:u6|                               ; 65 (65)           ; 33 (33)      ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6                                                                                                           ; work         ;
+;    |I2C_AV_Config:u3|                              ; 133 (85)          ; 75 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3                                                                                                          ; work         ;
+;       |I2C_Controller:u0|                          ; 48 (48)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0                                                                                        ; work         ;
+;    |KEYBOARD_DEC:u6|                               ; 68 (68)           ; 33 (33)      ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6                                                                                                           ; work         ;
 ;       |lpm_rom:lpm_rom_component|                  ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component                                                                                 ; work         ;
 ;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom                                                                     ; work         ;
 ;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                                ; work         ;
@@ -342,8 +341,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |LCD_TEST:u5|                                   ; 97 (76)           ; 51 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|LCD_TEST:u5                                                                                                               ; work         ;
 ;       |LCD_Controller:u0|                          ; 21 (21)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0                                                                                             ; work         ;
 ;    |Reset_Delay:r0|                                ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|Reset_Delay:r0                                                                                                            ; work         ;
-;    |SEG7_LUT_8:u0|                                 ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0                                                                                                             ; work         ;
-;       |SEG7_LUT:u0|                                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u0                                                                                                 ; work         ;
+;    |SEG7_LUT_8:u0|                                 ; 42 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0                                                                                                             ; work         ;
+;       |SEG7_LUT:u0|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u0                                                                                                 ; work         ;
 ;       |SEG7_LUT:u1|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u1                                                                                                 ; work         ;
 ;       |SEG7_LUT:u2|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u2                                                                                                 ; work         ;
 ;       |SEG7_LUT:u5|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u5                                                                                                 ; work         ;
@@ -352,7 +351,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |VGA_Audio_PLL:p1|                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1                                                                                                          ; work         ;
 ;       |altpll:altpll_component|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                  ; work         ;
 ;          |altpll_k3n2:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component|altpll_k3n2:auto_generated                                                       ; work         ;
-;    |VGA_CHAR_Ctrl:u8|                              ; 652 (652)         ; 718 (718)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_Ctrl:u8                                                                                                          ; work         ;
+;    |VGA_CHAR_Ctrl:u8|                              ; 657 (657)         ; 726 (726)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_Ctrl:u8                                                                                                          ; work         ;
 ;    |VGA_CHAR_RAM:u7|                               ; 42 (42)           ; 6 (6)        ; 11296       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7                                                                                                           ; work         ;
 ;       |char30x40_ram:char30x40_ram_component|      ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component                                                                     ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component                                     ; work         ;
@@ -374,29 +373,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_5961:altsyncram4|          ; 0 (0)             ; 0 (0)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|altsyncram_5961:altsyncram4                    ; work         ;
 ;             |cntr_6pf:cntr1|                       ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_6pf:cntr1                                 ; work         ;
 ;             |cntr_p8h:cntr5|                       ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_p8h:cntr5                                 ; work         ;
-;    |cpu:u9|                                        ; 2615 (65)         ; 1047 (25)    ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9                                                                                                                    ; work         ;
-;       |adder32:pc_add|                             ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|adder32:pc_add                                                                                                     ; work         ;
-;       |alu:alua|                                   ; 867 (867)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua                                                                                                           ; work         ;
+;    |cpu:u9|                                        ; 2655 (64)         ; 1049 (25)    ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9                                                                                                                    ; work         ;
+;       |adder32:pc_add|                             ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|adder32:pc_add                                                                                                     ; work         ;
+;       |alu:alua|                                   ; 869 (869)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua                                                                                                           ; work         ;
 ;       |alu_ctrler:alu_ctrlera|                     ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu_ctrler:alu_ctrlera                                                                                             ; work         ;
 ;       |is_branch:is_brancha|                       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|is_branch:is_brancha                                                                                               ; work         ;
-;       |main_ctrl:main_ctrla|                       ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla                                                                                               ; work         ;
-;       |mux32_32_32:alu_a_sel_1|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_a_sel_1                                                                                            ; work         ;
+;       |main_ctrl:main_ctrla|                       ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla                                                                                               ; work         ;
+;       |mux32_32_32:alu_a_sel_1|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_a_sel_1                                                                                            ; work         ;
 ;       |mux32_32_32:alu_b_sel_2|                    ; 51 (51)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2                                                                                            ; work         ;
-;       |mux32_32_32:link_sel|                       ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel                                                                                               ; work         ;
+;       |mux32_32_32:alu_ram_sel|                    ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_ram_sel                                                                                            ; work         ;
+;       |mux32_32_32:jpr_sel|                        ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:jpr_sel                                                                                                ; work         ;
+;       |mux32_32_32:link_sel|                       ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel                                                                                               ; work         ;
 ;       |mux5_5_5:reg_widx_sel2|                     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2                                                                                             ; work         ;
-;       |pc:pca|                                     ; 25 (25)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|pc:pca                                                                                                             ; work         ;
+;       |pc:pca|                                     ; 2 (2)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|pc:pca                                                                                                             ; work         ;
 ;       |plus4:pc_plus4|                             ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|plus4:pc_plus4                                                                                                     ; work         ;
 ;       |ram8x2048_DE2:ram8x2048a|                   ; 34 (34)           ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a                                                                                           ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component                                                           ; work         ;
 ;             |altsyncram_28b1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component|altsyncram_28b1:auto_generated                            ; work         ;
-;       |registers:register_file|                    ; 1329 (1329)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|registers:register_file                                                                                            ; work         ;
+;       |registers:register_file|                    ; 1325 (1325)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|registers:register_file                                                                                            ; work         ;
 ;       |rom8x1024_DE2:rom8x1024a|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a                                                                                           ; work         ;
 ;          |lpm_rom:lpm_rom_component|               ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component                                                                 ; work         ;
 ;             |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom                                                     ; work         ;
 ;                |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                ; work         ;
 ;                   |altsyncram_ol01:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated ; work         ;
 ;       |signext16_32:signext16_32a|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|signext16_32:signext16_32a                                                                                         ; work         ;
-;    |update_monitor_rom:update_rom|                 ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|update_monitor_rom:update_rom                                                                                             ; work         ;
+;    |update_monitor_rom:update_rom|                 ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|update_monitor_rom:update_rom                                                                                             ; work         ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -551,8 +552,6 @@ Encoding Type:  One-Hot
 ; VGA_OSD_RAM:u2|oGreen[0..7]                        ; Merged with VGA_OSD_RAM:u2|oRed[7]                    ;
 ; VGA_OSD_RAM:u2|oBlue[0..7]                         ; Merged with VGA_OSD_RAM:u2|oRed[7]                    ;
 ; VGA_CHAR_RAM:u7|pixel_sel_dd[0]                    ; Merged with VGA_OSD_RAM:u2|WR_ADDR_dd[1]              ;
-; cpu:u9|pc:pca|pc_reg[1]                            ; Merged with cpu:u9|pc:pca|pc_reg[0]                   ;
-; VGA_CHAR_Ctrl:u8|iPC_reg[1]                        ; Merged with VGA_CHAR_Ctrl:u8|iPC_reg[0]               ;
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[12]                 ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[12]           ;
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[11]                 ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[11]           ;
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[10]                 ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[10]           ;
@@ -566,9 +565,6 @@ Encoding Type:  One-Hot
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[2]                  ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[2]            ;
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[1]                  ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[1]            ;
 ; VGA_CHAR_Ctrl:u8|iRAM_ADDR_reg[0]                  ; Merged with VGA_CHAR_Ctrl:u8|iALU_Y_reg[0]            ;
-; VGA_CHAR_Ctrl:u8|PC_reg[1]                         ; Merged with VGA_CHAR_Ctrl:u8|PC_reg[0]                ;
-; VGA_CHAR_Ctrl:u8|iPCd_reg[1]                       ; Merged with VGA_CHAR_Ctrl:u8|iPCd_reg[0]              ;
-; VGA_CHAR_Ctrl:u8|iPCdd_reg[1]                      ; Merged with VGA_CHAR_Ctrl:u8|iPCdd_reg[0]             ;
 ; VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[8,9]                 ; Merged with VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[4]          ;
 ; VGA_CHAR_Ctrl:u8|RAM_WEN_reg                       ; Merged with VGA_CHAR_Ctrl:u8|RAM_ADDR_reg[4]          ;
 ; VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[8,9,11..31]         ; Merged with VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[10]        ;
@@ -610,11 +606,6 @@ Encoding Type:  One-Hot
 ; VGA_CHAR_Ctrl:u8|iREG_DATA2_reg[2]                 ; Merged with VGA_CHAR_Ctrl:u8|iRAM_WDATA_reg[2]        ;
 ; VGA_CHAR_Ctrl:u8|iREG_DATA2_reg[1]                 ; Merged with VGA_CHAR_Ctrl:u8|iRAM_WDATA_reg[1]        ;
 ; VGA_CHAR_Ctrl:u8|iREG_DATA2_reg[0]                 ; Merged with VGA_CHAR_Ctrl:u8|iRAM_WDATA_reg[0]        ;
-; cpu:u9|pc:pca|pc_reg[0]                            ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|iPC_reg[0]                        ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|PC_reg[0]                         ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|iPCd_reg[0]                       ; Stuck at GND due to stuck port data_in                ;
-; VGA_CHAR_Ctrl:u8|iPCdd_reg[0]                      ; Stuck at GND due to stuck port data_in                ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg~9                     ; Lost fanout                                           ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg~10                    ; Lost fanout                                           ;
 ; VGA_CHAR_Ctrl:u8|main_st_reg~11                    ; Lost fanout                                           ;
@@ -635,7 +626,7 @@ Encoding Type:  One-Hot
 ; VGA_CHAR_Ctrl:u8|main_st_reg.00000000              ; Lost fanout                                           ;
 ; Cont[27..31]                                       ; Lost fanout                                           ;
 ; AUDIO_DAC:u4|BCK_DIV[3]                            ; Stuck at GND due to stuck port data_in                ;
-; Total Number of Removed Registers = 385            ;                                                       ;
+; Total Number of Removed Registers = 375            ;                                                       ;
 +----------------------------------------------------+-------------------------------------------------------+
 
 
@@ -646,8 +637,8 @@ Encoding Type:  One-Hot
 +--------------------------------+---------------------------+-------------------------------------------------------------------------+
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[15] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[15], AUDIO_DAC:u4|LRCK_2X, AUDIO_DAC:u4|LRCK_4X, ;
 ;                                ; due to stuck port data_in ; AUDIO_DAC:u4|FLASH_Cont[0]                                              ;
-; cpu:u9|pc:pca|pc_reg[0]        ; Stuck at GND              ; VGA_CHAR_Ctrl:u8|iPC_reg[0], VGA_CHAR_Ctrl:u8|PC_reg[0],                ;
-;                                ; due to stuck port data_in ; VGA_CHAR_Ctrl:u8|iPCd_reg[0], VGA_CHAR_Ctrl:u8|iPCdd_reg[0]             ;
+; AUDIO_DAC:u4|FLASH_Out_Tmp[14] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[14]                                              ;
+;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[13] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[13]                                              ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|FLASH_Out_Tmp[12] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[12]                                              ;
@@ -724,7 +715,7 @@ Encoding Type:  One-Hot
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[8]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[8]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|FLASH_Out_Tmp[14] ; Stuck at GND              ; AUDIO_DAC:u4|FLASH_Out[14]                                              ;
+; AUDIO_DAC:u4|SRAM_Out_Tmp[7]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[7]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[6]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[6]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
@@ -736,7 +727,7 @@ Encoding Type:  One-Hot
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[2]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[2]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|SRAM_Out_Tmp[7]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[7]                                                ;
+; AUDIO_DAC:u4|SRAM_Out_Tmp[1]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[1]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; AUDIO_DAC:u4|SRAM_Out_Tmp[0]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[0]                                                ;
 ;                                ; due to stuck port data_in ;                                                                         ;
@@ -748,8 +739,6 @@ Encoding Type:  One-Hot
 ;                                ; due to stuck port data_in ;                                                                         ;
 ; I2C_AV_Config:u3|mI2C_DATA[16] ; Stuck at GND              ; I2C_AV_Config:u3|I2C_Controller:u0|SD[16]                               ;
 ;                                ; due to stuck port data_in ;                                                                         ;
-; AUDIO_DAC:u4|SRAM_Out_Tmp[1]   ; Stuck at GND              ; AUDIO_DAC:u4|SRAM_Out[1]                                                ;
-;                                ; due to stuck port data_in ;                                                                         ;
 +--------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
@@ -758,12 +747,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2128  ;
+; Total registers                              ; 2138  ;
 ; Number of registers using Synchronous Clear  ; 115   ;
-; Number of registers using Synchronous Load   ; 52    ;
-; Number of registers using Asynchronous Clear ; 2014  ;
+; Number of registers using Synchronous Load   ; 27    ;
+; Number of registers using Asynchronous Clear ; 2024  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1631  ;
+; Number of registers using Clock Enable       ; 1635  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -773,13 +762,13 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                ; Fan out ;
 +----------------------------------------------------------------------------------+---------+
-; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[0]                                 ; 18      ;
-; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[2]                                 ; 17      ;
-; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[3]                                 ; 21      ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[0]                                 ; 19      ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[2]                                 ; 16      ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[3]                                 ; 22      ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[1]                                 ; 17      ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[4]                                 ; 12      ;
 ; I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[5]                                 ; 11      ;
-; I2C_AV_Config:u3|I2C_Controller:u0|SCLK                                          ; 3       ;
+; I2C_AV_Config:u3|I2C_Controller:u0|SCLK                                          ; 2       ;
 ; cpu:u9|pc:pca|pc_reg[22]                                                         ; 2       ;
 ; VGA_CHAR_Ctrl:u8|KeyCurrentPosRow_reg[3]                                         ; 1       ;
 ; VGA_CHAR_Ctrl:u8|KeyCurrentPosRow_reg[2]                                         ; 1       ;
@@ -811,34 +800,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[28]                          ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[27]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|mStart              ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_reg[5]                  ;
-; 37:1               ; 5 bits    ; 120 LEs       ; 50 LEs               ; 70 LEs                 ; Yes        ; |DE2_115_Default|KEYBOARD_DEC:u6|key_ascii_reg[1]                  ;
-; 67:1               ; 6 bits    ; 264 LEs       ; 132 LEs              ; 132 LEs                ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[5]                 ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 12 LEs               ; 30 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|reg_idx[5]                       ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosCol_reg[5]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[0]                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|oDone               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[28]                          ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[13]                          ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_reg[2]                  ;
+; 37:1               ; 5 bits    ; 120 LEs       ; 50 LEs               ; 70 LEs                 ; Yes        ; |DE2_115_Default|KEYBOARD_DEC:u6|key_ascii_reg[4]                  ;
+; 67:1               ; 6 bits    ; 264 LEs       ; 132 LEs              ; 132 LEs                ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[2]                 ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 12 LEs               ; 30 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|reg_idx[2]                       ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosCol_reg[1]             ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[4]             ;
 ; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[0]             ;
-; 84:1               ; 2 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_src_tmp[3]              ;
+; 84:1               ; 2 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_src_tmp[2]              ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[3]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|main_st_reg                      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel|y[1]                  ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel|y[4]                  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2|y[20]              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[14]            ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2|y[4]                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2|y[7]               ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[14]            ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[7]             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data1[28] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data1[13] ;
 ; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data2[7]  ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 16 LEs               ; 68 LEs                 ; No         ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla|Selector0             ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DE2_115_Default|LCD_TEST:u5|mLCD_ST                               ;
-; 22:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux38                             ;
+; 22:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux43                             ;
 ; 21:1               ; 7 bits    ; 98 LEs        ; 56 LEs               ; 42 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux48                             ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux35                             ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux36                             ;
 ; 22:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux57                             ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux33                             ;
-; 23:1               ; 2 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux58                             ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux32                             ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux59                             ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|scan_st_reg                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
@@ -1715,15 +1704,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+-----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:u9|main_ctrl:main_ctrla"                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; jpr  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "cpu:u9|mux5_5_5:reg_widx_sel2" ;
 +------+-------+----------+---------------------------------+
@@ -1886,7 +1866,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:19     ;
+; Top            ; 00:00:18     ;
 +----------------+--------------+
 
 
@@ -1896,7 +1876,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 31 14:16:13 2019
+    Info: Processing started: Thu Oct 31 15:49:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115_Default -c DE2_115_Default
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file VGA_CHAR_Ctrl.v
@@ -2279,17 +2259,6 @@ Info (12131): Elaborated megafunction instantiation "cpu:u9|rom8x1024_DE2:rom8x1
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ol01.tdf
     Info (12023): Found entity 1: altsyncram_ol01
 Info (12128): Elaborating entity "altsyncram_ol01" for hierarchy "cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated"
-Warning (113031): 40 out of 1024 addresses are reinitialized. The latest initialized data will replace the existing data. There are 40 warnings found, and 10 warnings are reported.
-    Warning (113030): Memory Initialization File address 0 is reinitialized
-    Warning (113030): Memory Initialization File address 1 is reinitialized
-    Warning (113030): Memory Initialization File address 2 is reinitialized
-    Warning (113030): Memory Initialization File address 3 is reinitialized
-    Warning (113030): Memory Initialization File address 4 is reinitialized
-    Warning (113030): Memory Initialization File address 5 is reinitialized
-    Warning (113030): Memory Initialization File address 6 is reinitialized
-    Warning (113030): Memory Initialization File address 7 is reinitialized
-    Warning (113030): Memory Initialization File address 8 is reinitialized
-    Warning (113030): Memory Initialization File address 9 is reinitialized
 Info (12128): Elaborating entity "ram8x2048_DE2" for hierarchy "cpu:u9|ram8x2048_DE2:ram8x2048a"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component"
@@ -2619,7 +2588,6 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "GPIO[31]~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SMA_CLKOUT" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
     Warning (13410): Pin "HEX3[0]" is stuck at GND
     Warning (13410): Pin "HEX3[1]" is stuck at GND
     Warning (13410): Pin "HEX3[2]" is stuck at GND
@@ -2854,18 +2822,18 @@ Warning (21074): Design contains 84 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[14]"
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[15]"
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[16]"
-Info (21057): Implemented 6678 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6743 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 91 input pins
     Info (21059): Implemented 248 output pins
     Info (21060): Implemented 141 bidirectional pins
-    Info (21061): Implemented 6057 logic cells
+    Info (21061): Implemented 6122 logic cells
     Info (21064): Implemented 140 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 629 warnings
-    Info: Peak virtual memory: 427 megabytes
-    Info: Processing ended: Thu Oct 31 14:16:40 2019
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 617 warnings
+    Info: Peak virtual memory: 420 megabytes
+    Info: Processing ended: Thu Oct 31 15:50:17 2019
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
