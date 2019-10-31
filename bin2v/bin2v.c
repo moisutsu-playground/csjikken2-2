@@ -15,6 +15,7 @@
 
 /*
   実験 9 ヒント（１）：整数乗算命令 mult, ムーブ・フロム・Lo 命令 mflo についてのコメント追加
+  `defineR  6'b000000    R形式(add, addu, sub, subu, and, or, slt,jalr, jr, mult, mflo)
   実験 10 ヒント（１）：符号なし除算命令 divu, ムーブ・フロム・Hi 命令 mfhi についてのコメント追加
 
   `define      R  6'b000000    R 形式 (add, addu, sub, subu, and, or, slt, jalr, jr)
@@ -104,10 +105,12 @@
    SLTU       REG[rd] <= (REG[rs] < REG[rt]) ? 1 : 0;      SLTU rd,rs,rt
 
    実験 9 ヒント（２）：整数乗算命令 mult についてのコメント追加
-   ...
+   MULT(op = 000000, func = 011000)
+   MULT{Hi, Lo} <= REG[rs] * REG[rt];MULT rs,rt
 
    実験 9 ヒント（３）：ムーブ・フロム・Lo 命令 mflo についてのコメント追加
-   ...
+   MFLO(op = 000000, func = 010010)
+   MFLO      REG[rd]  <= Lo;                    MFLO rd
 
    実験 10 ヒント（２）：符号なし除算命令 divu についてのコメント追加
    ...
@@ -217,7 +220,7 @@
 // 実験 9 ヒント（４）：ムーブ・フロム・Lo 命令 mflo の func コードの define
 
 //#define    MULT XX
-//#define    MFLO XX
+#define    MFLO 18
 
 #define      LB 32
 #define      SB 40
@@ -520,12 +523,16 @@ void fprint_sim(FILE *outfp, volatile unsigned int wd, unsigned int op_cnt) {
 			break;
 
 			// 実験 9 ヒント（５）：整数乗算命令 mult に関する rom8x1024_sim.v 生成用の記述
-			//		case MULT:
-			//			break;
+		case MULT:
+			fprintf(outfp, "10'h%03x: data = 32'h%08x; // %08x: MULT, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "{ Hi, Lo }<=REG[%d]*REG[%d];\n", rs, rt);			
+			break;
 
 			// 実験 9 ヒント（６）：ムーブ・フロム・Lo 命令 mflo に関する rom8x1024_sim.v 生成用の記述 
-			//		case MFLO:
-			//			break;
+		case MFLO:
+			fprintf(outfp, "10'h%03x: data = 32'h%08x; // %08x: MFLO, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "REG[%d]<=Lo;\n", rd);
+			break;
 
 			// 実験 10 ヒント（５）：符号なし除算命令 divu に関する rom8x1024_sim.v 生成用の記述
 			//		case DIVU:
@@ -760,8 +767,10 @@ void fprint_mif(FILE *outfp, unsigned int wd, unsigned int op_cnt) {
 			break;
 
 			// 実験 9 ヒント（７）：整数乗算命令 mult に関する rom8x1024_DE2.mif 生成用の記述
-			///		case MULT:
-			//			break;
+		case MULT:
+			fprintf(outfp, "%03x : %08x ; %% %08x: MULT, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "REG[%d]<=(REG[%d]<REG[%d])?1:0; %%\n", rd, rs, rt);
+			break;
 
 			// 実験 9 ヒント（８）：ムーブ・フロム・Lo 命令 mflo に関する rom8x1024_DE2.mif 生成用の記述 
 			//		case MFLO:
