@@ -394,7 +394,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 5 のヒント(1)：R 形式の命令 JR の追加、JR の機能コードの記述
 //
-                  || Rfunc == 6'b001001)) ? 1'b1 : 1'b0;
+                  || Rfunc == 6'b000000)) ? 1'b1 : 1'b0;
 //
 //
 //
@@ -567,7 +567,7 @@ module main_ctrl (instruction,
 //
 // 追加設計 5 のヒント(2)：R 形式の命令 JR の追加、レジスタファイルへの制御信号の記述
 //
-              reg_write_enable_tmp = 1'b1;
+              reg_write_enable_tmp = 1'b0;
 //
 //
 //
