@@ -24,7 +24,7 @@ module rom8x1024_sim (rom_addr, rom_data);
    
   always @(word_addr) begin
     case (word_addr)
-      10'h000: data = 32'he000000c; // 00400000: other type! opcode=56(10)
+      10'h000: data = 32'h6000000c; // 00400000: LLO, REG[0].[15:0]<=12; #NOT YET IMPREMENTED
       10'h001: data = 32'h00000000; // 00400004: SLL, REG[0]<=REG[0]<<0;
       10'h002: data = 32'h00000000; // 00400008: SLL, REG[0]<=REG[0]<<0;
       10'h003: data = 32'h00000000; // 0040000c: SLL, REG[0]<=REG[0]<<0;
@@ -43,10 +43,10 @@ module rom8x1024_sim (rom_addr, rom_data);
       10'h010: data = 32'h24030300; // 00400040: ADDIU, REG[3]<=REG[0]+768(=0x00000300);
       10'h011: data = 32'h24020001; // 00400044: ADDIU, REG[2]<=REG[0]+1(=0x00000001);
       10'h012: data = 32'hac620000; // 00400048: SW, RAM[REG[3]+0]<=REG[2];
-      10'h013: data = 32'h03c0e821; // 0040004c: ADDU, REG[29]<=REG[30]+REG[0];
-      10'h014: data = 32'h8fbe0000; // 00400050: LW, REG[30]<=RAM[REG[29]+0];
-      10'h015: data = 32'h27bd0008; // 00400054: ADDIU, REG[29]<=REG[29]+8(=0x00000008);
-      10'h016: data = 32'h03e00008; // 00400058: JR, PC<=REG[31];
+      10'h013: data = 32'h0810000b; // 0040004c: J, PC<=0x0010000b*4(=0x0040002c);
+      10'h014: data = 32'h00000000; // 00400050: SLL, REG[0]<=REG[0]<<0;
+      10'h015: data = 32'h00000000; // 00400054: SLL, REG[0]<=REG[0]<<0;
+      10'h016: data = 32'h00000000; // 00400058: SLL, REG[0]<=REG[0]<<0;
       10'h017: data = 32'h00000000; // 0040005c: SLL, REG[0]<=REG[0]<<0;
     endcase
   end

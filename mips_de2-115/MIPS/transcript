@@ -1,25 +1,4 @@
 # OpenFile test_cpu.v 
-vlog test_cpu.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module rom8x1024_sim
-# -- Compiling module ram8x2048_sim
-# -- Compiling module alu
-# -- Compiling module pc
-# -- Compiling module registers
-# -- Compiling module plus4
-# -- Compiling module adder32
-# -- Compiling module mux32_32_32
-# -- Compiling module mux5_5_5
-# -- Compiling module main_ctrl
-# -- Compiling module alu_ctrler
-# -- Compiling module shifter32_32_l2
-# -- Compiling module signext16_32
-# -- Compiling module is_branch
-# -- Compiling module cpu
-# -- Compiling module test_cpu
-# 
-# Top level modules:
-# 	test_cpu
 vsim test_cpu
 # vsim test_cpu 
 # Loading work.test_cpu
@@ -42,6 +21,25 @@ vsim test_cpu
 #         Region: /test_cpu/cpua
 view wave
 # .main_pane.wave.interior.cs.body.pw.wf
-add wave *
-run 1000ns
+add wave pc
+# (vish-4014) No objects found matching 'pc'.
+add wave -position insertpoint  \
+sim:/test_cpu/o_pc
+add wave -position insertpoint  \
+sim:/test_cpu/o_reg_idx1
+add wave -position insertpoint  \
+sim:/test_cpu/o_reg_wdata
+add wave -position insertpoint  \
+sim:/test_cpu/o_reg_widx
+add wave -position insertpoint  \
+sim:/test_cpu/o_reg_wen
+add wave -position insertpoint  \
+sim:/test_cpu/o_ram_addr
+add wave -position insertpoint  \
+sim:/test_cpu/o_ram_rdata
+add wave -position insertpoint  \
+sim:/test_cpu/o_ram_wdata
+add wave -position insertpoint  \
+sim:/test_cpu/o_ram_wen
+run 500ns
 quit
