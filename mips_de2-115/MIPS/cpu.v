@@ -63,16 +63,15 @@ Top module || Sub modules
 //
 //論理シミュレーション用
 //DE2, quartus, 動作実験時コメントアウト
-`include "rom8x1024_sim.v"  // ROMの記述（論理シミュレーション用）
-`include "ram8x2048_sim.v"  // RAMの記述（論理シミュレーション用）
+//`include "rom8x1024_sim.v"  // ROMの記述（論理シミュレーション用）
+//`include "ram8x2048_sim.v"  // RAMの記述（論理シミュレーション用）
 
 //
 //動作実験用
 //論理シミュレーション時コメントアウト
-/*
 `include "rom8x1024_DE2.v"  // ROMの記述（DE2ボード, quartus, 動作実験用）
 `include "ram8x2048_DE2.v"  // RAMの記述（DE2ボード, quartus, 動作実験用）
-*/
+
 `include "alu.v"           // ALUの記述
 `include "pc.v"            // PCの記述
 `include "registers.v"     // レジスタファイルの記述
@@ -260,14 +259,18 @@ module cpu (clk, reset,
 //
 //追加設計 2 のヒント(1)：jp_sel の入出力用ワイヤの宣言
 //
-// wire  [31:0]     jp_sel_d0;  // jp 選択回路モジュール データ 1
-// wire  [31:0]     jp_sel_d1;  // jp 選択回路モジュール データ 2
-// wire              jp_sel_s;  // jp 選択回路モジュール セレクト信号
-// wire  [31:0]      jp_sel_y;  // jp 選択回路モジュール 出力
+ wire  [31:0]     jp_sel_d0;  // jp 選択回路モジュール データ 1
+ wire  [31:0]     jp_sel_d1;  // jp 選択回路モジュール データ 2
+ wire              jp_sel_s;  // jp 選択回路モジュール セレクト信号
+ wire  [31:0]      jp_sel_y;  // jp 選択回路モジュール 出力
 
 //
 //追加設計 5 ヒント(1)：jpr_sel の入出力用ワイヤの宣言
 //
+  wire   [31:0]     jpr_sel_d0;
+  wire   [31:0]     jpr_sel_d1;
+  wire               jpr_sel_s;
+  wire   [31:0]      jpr_sel_y;
 
   wire   [31:0]    instruction;  // メイン制御回路
   wire              alu_b_sel1;  // メイン制御回路
@@ -313,11 +316,11 @@ module cpu (clk, reset,
   //
   //論理シミュレーション用
   //DE2, quartus, 動作実験時コメントアウト
-  rom8x1024_sim  rom8x1024a(rom_addr, rom_data);
+  //rom8x1024_sim  rom8x1024a(rom_addr, rom_data);
   //
   //動作実験用
   //論理シミュレーション時コメントアウト
-  //rom8x1024_DE2  rom8x1024a(clock_rom, rom_addr, rom_data);
+  rom8x1024_DE2  rom8x1024a(clock_rom, rom_addr, rom_data);
 
   //                        +----+
   //                   clk->|    |
@@ -331,17 +334,16 @@ module cpu (clk, reset,
   //
   //論理シミュレーション用
   //DE2, quartus, 動作実験時コメントアウト
-  ram8x2048_sim  ram8x2048a(clk, ram_addr, ram_write_enable,
-                            ram_write_data, ram_read_data,
-                            key_ram_addr, key_ram_wdata, key_ram_wen);
+  //ram8x2048_sim  ram8x2048a(clk, ram_addr, ram_write_enable,
+  //                          ram_write_data, ram_read_data,
+  //                          key_ram_addr, key_ram_wdata, key_ram_wen);
   //
   //動作実験用
   //論理シミュレーション時コメントアウト
-  /*
   ram8x2048_DE2  ram8x2048a(clock_ram, ram_addr, ram_write_enable,
                             ram_write_data, ram_read_data,
                             key_ram_addr, key_ram_wdata, key_ram_wen);
-*/
+
 // 実験 9 のヒント（１）：ALU モジュールの実体化に関する記述の変更
 // 　　   clock, reset 信号の追加、乗算結果を保持するレジスタ hi と lo 用
   // alu
@@ -405,10 +407,13 @@ module cpu (clk, reset,
 //追加設計 5 ヒント(2)：32-bit, 32-bit 入力, 32-bit 出力のセレクタを実体化
 //
 
+  mux32_32_32 jpr_sel(jpr_sel_d0, jpr_sel_d1, jpr_sel_s, jpr_sel_y);
+
+
 //
 //追加設計 2 のヒント(2)：32-bit, 32-bit 入力, 32-bit 出力のセレクタを実体化
 //
-// mux32_32_32  jp_sel(jp_sel_d0, jp_sel_d1, jp_sel_s, jp_sel_y);
+  mux32_32_32  jp_sel(jp_sel_d0, jp_sel_d1, jp_sel_s, jp_sel_y);
 
   mux32_32_32  pc_sel(pc_sel_d0, pc_sel_d1, pc_sel_s, pc_sel_y);
 
@@ -485,12 +490,11 @@ module cpu (clk, reset,
 //
 //追加設計 5 ヒント(3)：jpr_sel の出力 jpr_sel_y の pc_next への接続
 //
-
+  assign pc_next = jpr_sel_y;
 //
 //追加設計 2 のヒント(3)：jp_sel の出力 jp_sel_y の pc_next への接続
 //
-// assign pc_next = jp_sel_y;
-  assign pc_next = pc_sel_y;
+  //assign pc_next = jp_sel_y;
 
   assign reg_read_idx1 = instruction[25:21];
   assign reg_read_idx2 = instruction[20:16];
@@ -522,13 +526,16 @@ module cpu (clk, reset,
 //
 //追加設計 2 ヒント(4)：jp_sel の入力 jp_sel_d0, jp_sel_d1, jp_sel_s の接続
 //
-// assign jp_sel_d0 = pc_sel_y;
-// assign jp_sel_d1 = sh_j_y;
-// assign jp_sel_s = jp;
+  assign jp_sel_d0 = pc_sel_y;
+  assign jp_sel_d1 = sh_j_y;
+  assign jp_sel_s = jp;
 
 //
 //追加設計 5 ヒント(4)：jpr_sel の入力 jpr_sel_d0, jpr_sel_d1, jpr_sel_s と接続
 //
+  assign jpr_sel_d0 = jp_sel_y;
+  assign jpr_sel_d1 = alu_ram_sel_y;
+  assign jpr_sel_s = jpr;
 
   assign instruction = rom_data;
   assign func = y32[5:0];
@@ -562,4 +569,3 @@ module cpu (clk, reset,
   assign o_ram_wen   = ram_write_enable;
    
 endmodule
-   
