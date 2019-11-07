@@ -42,7 +42,8 @@
 // lui(load upper immediate)
 
 // 実験 9 のヒント（２）：コメントの追加(1)
-
+// mult(multiply)
+// mflo(move from Lo)
 
 
 // alu_ctrl[3:0], 実行する演算
@@ -60,7 +61,8 @@
 // 1111,           lui
 
 // 実験 9 のヒント（３）：コメントの追加(2)
-
+// 1011,           mult
+// 1100,           mflo
 
 
 // ALU 制御コード
@@ -78,11 +80,12 @@
 `define     ALU_LUI  4'b1111
 
 // 実験 9 のヒント（４）：mult, mflo 用の ALU 制御コードの define
-
+`define     ALU_MULT 4'b1011
+`define     ALU_MFLO 4'b1100
 
 // 実験 9 のヒント（５）：ALU モジュールの入力ポートの拡張
 // 　　   　　　　　　　　clock, reset 信号の追加、乗算結果を保持するレジスタ hi と lo 用
-module alu (alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  // 入出力ポート
+module alu (clock, reset, alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  //入出力ポート
   input  [31:0] alu_a;           // 入力 32-bit      a
   input  [31:0] alu_b;           // 入力 32-bit      b
   input   [3:0] alu_ctrl;        // 入力  4-bit   ALU 制御コード
@@ -93,8 +96,18 @@ module alu (alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  // 入出力ポート
   reg    [31:0] result;
   reg     [1:0]   comp;
 
-// 実験 9 のヒント（６）：mult 命令実行時に alu_a * alu_b の結果を {hi, lo}　に格納する記述の追加
-
+  // 実験 9 のヒント（６）：mult 命令実行時に alu_a * alu_b の結果を {hi, lo}　に格納する記述の追加
+  input clock, reset;   //入力 クロック,リセット
+  reg    [31:0] hi;              //上位
+  reg    [31:0] lo;              //下位
+  always @(posedge clock or negedge reset) begin
+    if (reset == 1'b0) begin
+      hi <= 32'h00000000;
+      lo <= 32'h00000000;
+    end else begin
+      {hi, lo} <= (alu_ctrl == `ALU_MULT) ? alu_a * alu_b : {hi, lo};
+    end
+  end
 
 
 
@@ -377,7 +390,9 @@ module alu (alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  // 入出力ポート
       end
 
 // 実験 9 のヒント（７）：mflo 命令実行時に {hi, lo} の lo を result に出力する記述の追加
-
+      `ALU_MFLO: begin
+        result <= lo;
+      end
 
       default: begin
         result <= 0;

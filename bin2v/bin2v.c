@@ -219,7 +219,7 @@
 
 // 実験 9 ヒント（４）：ムーブ・フロム・Lo 命令 mflo の func コードの define
 
-//#define    MULT XX
+#define    MULT 24
 #define    MFLO 18
 
 #define      LB 32
@@ -769,12 +769,14 @@ void fprint_mif(FILE *outfp, unsigned int wd, unsigned int op_cnt) {
 			// 実験 9 ヒント（７）：整数乗算命令 mult に関する rom8x1024_DE2.mif 生成用の記述
 		case MULT:
 			fprintf(outfp, "%03x : %08x ; %% %08x: MULT, ", rom_addr, wd, cmt_addr);
-			fprintf(outfp, "REG[%d]<=(REG[%d]<REG[%d])?1:0; %%\n", rd, rs, rt);
+			fprintf(outfp, "{Hi, Lo}<=(REG[%d]*REG[%d]); %%\n", rs, rt);
 			break;
 
 			// 実験 9 ヒント（８）：ムーブ・フロム・Lo 命令 mflo に関する rom8x1024_DE2.mif 生成用の記述 
-			//		case MFLO:
-			//			break;
+		case MFLO:
+			fprintf(outfp, "%03x : %08x ; %% %08x: MFLO, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "REG[%d]<=Lo; %%\n", rd);		
+			break;
 	  
 			// 実験 10 ヒント（７）：符号なし除算命令 divu に関する rom8x1024_DE2.mif 生成用の記述
 			//		case DIVU:

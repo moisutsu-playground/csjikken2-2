@@ -22,8 +22,8 @@
 `define     ALU_CTRL_LUI  4'b1111
 
 // 実験 9 のヒント（１０）：mult, mflo 命令用の ALU 制御コードの define
-
-
+`define     ALU_CTRL_MULT 4'b1011
+`define     ALU_CTRL_MFLO 4'b1100
 
 
 //           命令,         ALUOp(alu_op),  命令機能コード(func), ALU 制御コード
@@ -37,8 +37,8 @@
 //   addiu(add immedaiate),     000,         xxxxxx,             0010(add)
 
 // 実験 9 のヒント（１１）：mult, mflo 命令用の ALU 制御コードについてのコメント
-
-
+//        R 形式 mult,          010,          011000,             1011(mult)
+//        R 形式 mflo,          010,          010010,             1100(mflo)
 
 //        R 形式 add,           010,          100000,             0010(add)
 //        R 形式 addu,          010,          100001,             0010(add)
@@ -123,9 +123,10 @@ module alu_ctrler (alu_op, func, alu_ctrl);  // 入出力ポート
           y = `ALU_CTRL_SLTU;
 
 // 実験 9 のヒント（１２）：実行する命令が mult, mflo 命令のとき、mult, mflo 命令用の ALU 制御コードを生成する処理の記述
-
-
-
+        end else if (func == 6'b010010) begin // func=MFLO
+          y = `ALU_CTRL_MFLO;
+        end else if (func == 6'b011000) begin // func=MULT
+          y = `ALU_CTRL_MULT;
 
         end else begin
           y = 3'b000;

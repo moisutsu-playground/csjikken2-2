@@ -344,15 +344,18 @@ module cpu (clk, reset,
                             ram_write_data, ram_read_data,
                             key_ram_addr, key_ram_wdata, key_ram_wen);
 
-// 実験 9 のヒント（１）：ALU モジュールの実体化に関する記述の変更
-// 　　   clock, reset 信号の追加、乗算結果を保持するレジスタ hi と lo 用
+
+  //実験9のヒント（１）：ALUモジュールの実体化に関する記述の変更
+  //clock, reset信号の追加，乗算結果を保持するレジスタhiとlo用
   // alu
   //                  +----+
+  //           clock->|    |
+  //           reset->|    |
   //     alu_a[31:0]->|    |
   //     alu_b[31:0]->|    |->alu_y[31:0]
   //   alu_ctrl[3:0]->|    |->alu_comp[1:0]
   //                  +----+
-  alu  alua(alu_a, alu_b, alu_ctrl, alu_y, alu_comp);
+  alu  alua(clock, reset, alu_a, alu_b, alu_ctrl, alu_y, alu_comp);
 
   // pc
   //                +----+
