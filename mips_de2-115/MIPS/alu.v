@@ -83,6 +83,9 @@
 `define     ALU_MULT 4'b1011
 `define     ALU_MFLO 4'b1100
 
+`define     ALU_DIVU 4'b0001
+`define     ALU_MFHI 4'b0101
+
 // 実験 9 のヒント（５）：ALU モジュールの入力ポートの拡張
 // 　　   　　　　　　　　clock, reset 信号の追加、乗算結果を保持するレジスタ hi と lo 用
 module alu (clock, reset, alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  //入出力ポート
@@ -105,7 +108,16 @@ module alu (clock, reset, alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  //入出力
       hi <= 32'h00000000;
       lo <= 32'h00000000;
     end else begin
-      {hi, lo} <= (alu_ctrl == `ALU_MULT) ? alu_a * alu_b : {hi, lo};
+      case (alu_ctrl)
+        `ALU_MULT: begin
+          {hi, lo} <= alu_a * alu_b;
+        end
+        `ALU_DIVU: begin
+          hi <= alu_a % alu_b;
+          lo <= alu_a / alu_b;
+      //{hi, lo} <= (alu_ctrl == `ALU_MULT) ? alu_a * alu_b : {hi, lo};
+        end
+      endcase
     end
   end
 
@@ -392,6 +404,10 @@ module alu (clock, reset, alu_a, alu_b, alu_ctrl, alu_y, alu_comp);  //入出力
 // 実験 9 のヒント（７）：mflo 命令実行時に {hi, lo} の lo を result に出力する記述の追加
       `ALU_MFLO: begin
         result <= lo;
+      end
+
+      `ALU_MFHI: begin
+        result <= hi;
       end
 
       default: begin

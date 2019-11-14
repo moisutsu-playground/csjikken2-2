@@ -1,4 +1,5 @@
 v1
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6,

@@ -135,128 +135,74 @@ $L3:
 	.end	main
 	.size	main, .-main
 	.align	2
-	.globl	my_mod
-	.ent	my_mod
-my_mod:
-	.frame	$fp,24,$31		# vars= 16, regs= 1/0, args= 0, gp= 0
+	.globl	sosuu_check
+	.ent	sosuu_check
+sosuu_check:
+	.frame	$fp,32,$31		# vars= 24, regs= 1/0, args= 0, gp= 0
 	.mask	0x40000000,-8
 	.fmask	0x00000000,0
 	.set	noreorder
 	.set	nomacro
 	
-	addiu	$sp,$sp,-24
-	sw	$fp,16($sp)
+	addiu	$sp,$sp,-32
+	sw	$fp,24($sp)
 	move	$fp,$sp
-	sw	$4,24($fp)
-	sw	$5,28($fp)
-	lw	$2,24($fp)
-	nop
-	sw	$2,0($fp)
-$L10:
-	lw	$2,0($fp)
-	nop
-	sw	$2,4($fp)
-	lw	$3,0($fp)
-	lw	$2,28($fp)
-	nop
-	sltu	$2,$3,$2
-	beq	$2,$0,$L11
-	nop
-
-	lw	$2,4($fp)
-	nop
-	sw	$2,8($fp)
-	j	$L9
-	nop
-
-$L11:
-	lw	$2,0($fp)
-	lw	$3,28($fp)
-	nop
-	subu	$2,$2,$3
-	sw	$2,0($fp)
-	j	$L10
-	nop
-
-$L9:
-	lw	$2,8($fp)
-	move	$sp,$fp
-	lw	$fp,16($sp)
-	addiu	$sp,$sp,24
-	j	$31
-	nop
-
-	.set	macro
-	.set	reorder
-	.end	my_mod
-	.size	my_mod, .-my_mod
-	.align	2
-	.globl	sosuu_check
-	.ent	sosuu_check
-sosuu_check:
-	.frame	$fp,48,$31		# vars= 24, regs= 2/0, args= 16, gp= 0
-	.mask	0xc0000000,-4
-	.fmask	0x00000000,0
-	.set	noreorder
-	.set	nomacro
-	
-	addiu	$sp,$sp,-48
-	sw	$31,44($sp)
-	sw	$fp,40($sp)
-	move	$fp,$sp
-	sw	$4,48($fp)
-	lw	$2,48($fp)
+	sw	$4,32($fp)
+	lw	$2,32($fp)
 	nop
 	andi	$2,$2,0x1
-	bne	$2,$0,$L15
-	nop
-
-	sw	$0,32($fp)
-	j	$L17
-	nop
-
-$L15:
-	li	$2,1			# 0x1
-	sw	$2,16($fp)
-	li	$2,3			# 0x3
-	sw	$2,20($fp)
-	j	$L18
-	nop
-
-$L19:
-	lw	$4,48($fp)
-	lw	$5,20($fp)
-	jal	my_mod
-	nop
-
-	bne	$2,$0,$L20
+	bne	$2,$0,$L10
 	nop
 
 	sw	$0,16($fp)
-$L20:
-	lw	$2,20($fp)
-	nop
-	addiu	$2,$2,2
-	sw	$2,20($fp)
-$L18:
-	lw	$2,48($fp)
-	nop
-	srl	$3,$2,1
-	lw	$2,20($fp)
-	nop
-	sltu	$2,$2,$3
-	bne	$2,$0,$L19
+	j	$L12
 	nop
 
-	lw	$2,16($fp)
+$L10:
+	li	$2,1			# 0x1
+	sw	$2,0($fp)
+	li	$2,3			# 0x3
+	sw	$2,4($fp)
+	j	$L13
 	nop
-	sw	$2,32($fp)
-$L17:
+
+$L14:
+	lw	$3,32($fp)
+	lw	$2,4($fp)
+	nop
+	divu	$0,$3,$2
+	bne	$2,$0,1f
+	nop
+	break	7
+1:
+	mfhi	$2
+	bne	$2,$0,$L15
+	nop
+
+	sw	$0,0($fp)
+$L15:
+	lw	$2,4($fp)
+	nop
+	addiu	$2,$2,2
+	sw	$2,4($fp)
+$L13:
 	lw	$2,32($fp)
+	nop
+	srl	$3,$2,1
+	lw	$2,4($fp)
+	nop
+	sltu	$2,$2,$3
+	bne	$2,$0,$L14
+	nop
+
+	lw	$2,0($fp)
+	nop
+	sw	$2,16($fp)
+$L12:
+	lw	$2,16($fp)
 	move	$sp,$fp
-	lw	$31,44($sp)
-	lw	$fp,40($sp)
-	addiu	$sp,$sp,48
+	lw	$fp,24($sp)
+	addiu	$sp,$sp,32
 	j	$31
 	nop
 
@@ -282,10 +228,10 @@ my_a2i:
 	nop
 	sw	$2,8($fp)
 	sw	$0,4($fp)
-	j	$L25
+	j	$L20
 	nop
 
-$L26:
+$L21:
 	lw	$2,8($fp)
 	nop
 	addiu	$2,$2,4
@@ -294,12 +240,12 @@ $L26:
 	nop
 	addiu	$2,$2,1
 	sw	$2,4($fp)
-$L25:
+$L20:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
-	bne	$2,$0,$L26
+	bne	$2,$0,$L21
 	nop
 
 	sw	$0,0($fp)
@@ -308,7 +254,7 @@ $L25:
 	sw	$2,8($fp)
 	lw	$3,4($fp)
 	li	$2,1			# 0x1
-	bne	$3,$2,$L28
+	bne	$3,$2,$L23
 	nop
 
 	lw	$2,8($fp)
@@ -317,20 +263,20 @@ $L25:
 	nop
 	addiu	$2,$2,-48
 	sw	$2,0($fp)
-	j	$L30
+	j	$L25
 	nop
 
-$L28:
+$L23:
 	lw	$3,4($fp)
 	li	$2,2			# 0x2
-	bne	$3,$2,$L31
+	bne	$3,$2,$L26
 	nop
 
 	sw	$0,4($fp)
-	j	$L33
+	j	$L28
 	nop
 
-$L34:
+$L29:
 	lw	$2,0($fp)
 	nop
 	addiu	$2,$2,10
@@ -339,7 +285,7 @@ $L34:
 	nop
 	addiu	$2,$2,1
 	sw	$2,4($fp)
-$L33:
+$L28:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
@@ -348,7 +294,7 @@ $L33:
 	lw	$2,4($fp)
 	nop
 	sltu	$2,$2,$3
-	bne	$2,$0,$L34
+	bne	$2,$0,$L29
 	nop
 
 	lw	$2,8($fp)
@@ -363,20 +309,20 @@ $L33:
 	addu	$2,$3,$2
 	addiu	$2,$2,-48
 	sw	$2,0($fp)
-	j	$L30
+	j	$L25
 	nop
 
-$L31:
+$L26:
 	lw	$3,4($fp)
 	li	$2,3			# 0x3
-	bne	$3,$2,$L30
+	bne	$3,$2,$L25
 	nop
 
 	sw	$0,4($fp)
-	j	$L37
+	j	$L32
 	nop
 
-$L38:
+$L33:
 	lw	$2,0($fp)
 	nop
 	addiu	$2,$2,100
@@ -385,7 +331,7 @@ $L38:
 	nop
 	addiu	$2,$2,1
 	sw	$2,4($fp)
-$L37:
+$L32:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
@@ -394,7 +340,7 @@ $L37:
 	lw	$2,4($fp)
 	nop
 	sltu	$2,$2,$3
-	bne	$2,$0,$L38
+	bne	$2,$0,$L33
 	nop
 
 	lw	$2,8($fp)
@@ -402,10 +348,10 @@ $L37:
 	addiu	$2,$2,4
 	sw	$2,8($fp)
 	sw	$0,4($fp)
-	j	$L40
+	j	$L35
 	nop
 
-$L41:
+$L36:
 	lw	$2,0($fp)
 	nop
 	addiu	$2,$2,10
@@ -414,7 +360,7 @@ $L41:
 	nop
 	addiu	$2,$2,1
 	sw	$2,4($fp)
-$L40:
+$L35:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
@@ -423,7 +369,7 @@ $L40:
 	lw	$2,4($fp)
 	nop
 	sltu	$2,$2,$3
-	bne	$2,$0,$L41
+	bne	$2,$0,$L36
 	nop
 
 	lw	$2,8($fp)
@@ -438,7 +384,7 @@ $L40:
 	addu	$2,$3,$2
 	addiu	$2,$2,-48
 	sw	$2,0($fp)
-$L30:
+$L25:
 	lw	$2,0($fp)
 	move	$sp,$fp
 	lw	$fp,16($sp)
@@ -466,10 +412,10 @@ my_i2a:
 	move	$fp,$sp
 	sw	$4,48($fp)
 	sw	$0,16($fp)
-	j	$L45
+	j	$L40
 	nop
 
-$L46:
+$L41:
 	lw	$2,48($fp)
 	nop
 	addiu	$2,$2,-10
@@ -478,11 +424,11 @@ $L46:
 	nop
 	addiu	$2,$2,1
 	sw	$2,16($fp)
-$L45:
+$L40:
 	lw	$2,48($fp)
 	nop
 	sltu	$2,$2,10
-	beq	$2,$0,$L46
+	beq	$2,$0,$L41
 	nop
 
 	lw	$2,16($fp)
@@ -539,31 +485,31 @@ my_scan:
 	li	$3,776			# 0x308
 	li	$2,1			# 0x1
 	sw	$2,0($3)
-	j	$L50
+	j	$L45
 	nop
 
-$L51:
+$L46:
 	li	$2,776			# 0x308
 	sw	$0,0($2)
 	li	$3,776			# 0x308
 	li	$2,1			# 0x1
 	sw	$2,0($3)
-$L50:
+$L45:
 	li	$2,784			# 0x310
 	lw	$3,0($2)
 	li	$2,-1			# 0xffffffffffffffff
-	beq	$3,$2,$L51
+	beq	$3,$2,$L46
 	nop
 
-	j	$L53
+	j	$L48
 	nop
 
-$L54:
+$L49:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
-	beq	$2,$0,$L55
+	beq	$2,$0,$L50
 	nop
 
 	lw	$2,8($fp)
@@ -571,7 +517,7 @@ $L54:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,27
-	beq	$2,$0,$L55
+	beq	$2,$0,$L50
 	nop
 
 	lw	$2,8($fp)
@@ -582,16 +528,16 @@ $L54:
 	lw	$2,8($fp)
 	nop
 	sw	$3,0($2)
-	j	$L58
+	j	$L53
 	nop
 
-$L55:
+$L50:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,48
-	bne	$2,$0,$L59
+	bne	$2,$0,$L54
 	nop
 
 	lw	$2,8($fp)
@@ -599,7 +545,7 @@ $L55:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,58
-	beq	$2,$0,$L59
+	beq	$2,$0,$L54
 	nop
 
 	lw	$2,8($fp)
@@ -608,58 +554,58 @@ $L55:
 	lw	$2,8($fp)
 	nop
 	sw	$3,0($2)
-	j	$L58
+	j	$L53
 	nop
 
-$L59:
+$L54:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
-	bne	$2,$0,$L62
+	bne	$2,$0,$L57
 	nop
 
 	lw	$3,8($fp)
 	li	$2,64			# 0x40
 	sw	$2,0($3)
-	j	$L58
+	j	$L53
 	nop
 
-$L62:
+$L57:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
 	li	$2,27			# 0x1b
-	bne	$3,$2,$L64
+	bne	$3,$2,$L59
 	nop
 
 	lw	$3,8($fp)
 	li	$2,91			# 0x5b
 	sw	$2,0($3)
-	j	$L58
+	j	$L53
 	nop
 
-$L64:
+$L59:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
 	li	$2,29			# 0x1d
-	bne	$3,$2,$L66
+	bne	$3,$2,$L61
 	nop
 
 	lw	$3,8($fp)
 	li	$2,93			# 0x5d
 	sw	$2,0($3)
-	j	$L58
+	j	$L53
 	nop
 
-$L66:
+$L61:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,32
-	bne	$2,$0,$L68
+	bne	$2,$0,$L63
 	nop
 
 	lw	$2,8($fp)
@@ -667,7 +613,7 @@ $L66:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,48
-	beq	$2,$0,$L68
+	beq	$2,$0,$L63
 	nop
 
 	lw	$2,8($fp)
@@ -676,84 +622,84 @@ $L66:
 	lw	$2,8($fp)
 	nop
 	sw	$3,0($2)
-	j	$L58
+	j	$L53
+	nop
+
+$L63:
+	lw	$2,8($fp)
+	nop
+	lw	$3,0($2)
+	li	$2,58			# 0x3a
+	bne	$3,$2,$L66
+	nop
+
+	lw	$3,8($fp)
+	li	$2,63			# 0x3f
+	sw	$2,0($3)
+	j	$L53
+	nop
+
+$L66:
+	lw	$2,8($fp)
+	nop
+	lw	$3,0($2)
+	li	$2,59			# 0x3b
+	bne	$3,$2,$L68
+	nop
+
+	lw	$3,8($fp)
+	li	$2,61			# 0x3d
+	sw	$2,0($3)
+	j	$L53
 	nop
 
 $L68:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
-	li	$2,58			# 0x3a
-	bne	$3,$2,$L71
-	nop
-
-	lw	$3,8($fp)
-	li	$2,63			# 0x3f
-	sw	$2,0($3)
-	j	$L58
-	nop
-
-$L71:
-	lw	$2,8($fp)
-	nop
-	lw	$3,0($2)
-	li	$2,59			# 0x3b
-	bne	$3,$2,$L73
-	nop
-
-	lw	$3,8($fp)
-	li	$2,61			# 0x3d
-	sw	$2,0($3)
-	j	$L58
-	nop
-
-$L73:
-	lw	$2,8($fp)
-	nop
-	lw	$3,0($2)
 	li	$2,60			# 0x3c
-	bne	$3,$2,$L75
+	bne	$3,$2,$L70
 	nop
 
 	lw	$3,8($fp)
 	li	$2,59			# 0x3b
 	sw	$2,0($3)
-	j	$L58
+	j	$L53
 	nop
 
-$L75:
+$L70:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
 	li	$2,61			# 0x3d
-	bne	$3,$2,$L77
+	bne	$3,$2,$L72
 	nop
 
 	lw	$3,8($fp)
 	li	$2,58			# 0x3a
 	sw	$2,0($3)
-	j	$L58
+	j	$L53
 	nop
 
-$L77:
+$L72:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
 	li	$2,62			# 0x3e
-	bne	$3,$2,$L79
+	bne	$3,$2,$L74
 	nop
 
 	lw	$3,8($fp)
 	li	$2,10			# 0xa
 	sw	$2,0($3)
-	j	$L58
+	j	$L53
 	nop
 
-$L79:
+$L74:
 	lw	$3,8($fp)
 	li	$2,64			# 0x40
 	sw	$2,0($3)
-$L58:
+$L53:
 	li	$2,776			# 0x308
 	sw	$0,0($2)
 	li	$3,776			# 0x308
@@ -763,7 +709,7 @@ $L58:
 	nop
 	addiu	$2,$2,4
 	sw	$2,8($fp)
-$L53:
+$L48:
 	li	$2,784			# 0x310
 	lw	$3,0($2)
 	lw	$2,8($fp)
@@ -773,7 +719,7 @@ $L53:
 	nop
 	lw	$3,0($2)
 	li	$2,62			# 0x3e
-	bne	$3,$2,$L54
+	bne	$3,$2,$L49
 	nop
 
 	lw	$2,8($fp)
@@ -812,10 +758,10 @@ my_print:
 	sw	$fp,0($sp)
 	move	$fp,$sp
 	sw	$4,8($fp)
-	j	$L84
+	j	$L79
 	nop
 
-$L85:
+$L80:
 	li	$2,768			# 0x300
 	sw	$0,0($2)
 	lw	$2,8($fp)
@@ -823,7 +769,7 @@ $L85:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,65
-	bne	$2,$0,$L86
+	bne	$2,$0,$L81
 	nop
 
 	lw	$2,8($fp)
@@ -831,7 +777,7 @@ $L85:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,91
-	beq	$2,$0,$L86
+	beq	$2,$0,$L81
 	nop
 
 	li	$3,772			# 0x304
@@ -841,16 +787,16 @@ $L85:
 	nop
 	addiu	$2,$2,-64
 	sw	$2,0($3)
-	j	$L89
+	j	$L84
 	nop
 
-$L86:
+$L81:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,97
-	bne	$2,$0,$L90
+	bne	$2,$0,$L85
 	nop
 
 	lw	$2,8($fp)
@@ -858,7 +804,7 @@ $L86:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,123
-	beq	$2,$0,$L90
+	beq	$2,$0,$L85
 	nop
 
 	li	$3,772			# 0x304
@@ -868,16 +814,16 @@ $L86:
 	nop
 	addiu	$2,$2,-96
 	sw	$2,0($3)
-	j	$L89
+	j	$L84
 	nop
 
-$L90:
+$L85:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,48
-	bne	$2,$0,$L93
+	bne	$2,$0,$L88
 	nop
 
 	lw	$2,8($fp)
@@ -885,7 +831,7 @@ $L90:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,58
-	beq	$2,$0,$L93
+	beq	$2,$0,$L88
 	nop
 
 	li	$2,772			# 0x304
@@ -894,57 +840,57 @@ $L90:
 	lw	$3,0($3)
 	nop
 	sw	$3,0($2)
-	j	$L89
+	j	$L84
+	nop
+
+$L88:
+	lw	$2,8($fp)
+	nop
+	lw	$3,0($2)
+	li	$2,64			# 0x40
+	bne	$3,$2,$L91
+	nop
+
+	li	$2,772			# 0x304
+	sw	$0,0($2)
+	j	$L84
+	nop
+
+$L91:
+	lw	$2,8($fp)
+	nop
+	lw	$3,0($2)
+	li	$2,91			# 0x5b
+	bne	$3,$2,$L93
+	nop
+
+	li	$3,772			# 0x304
+	li	$2,27			# 0x1b
+	sw	$2,0($3)
+	j	$L84
 	nop
 
 $L93:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
-	li	$2,64			# 0x40
-	bne	$3,$2,$L96
-	nop
-
-	li	$2,772			# 0x304
-	sw	$0,0($2)
-	j	$L89
-	nop
-
-$L96:
-	lw	$2,8($fp)
-	nop
-	lw	$3,0($2)
-	li	$2,91			# 0x5b
-	bne	$3,$2,$L98
-	nop
-
-	li	$3,772			# 0x304
-	li	$2,27			# 0x1b
-	sw	$2,0($3)
-	j	$L89
-	nop
-
-$L98:
-	lw	$2,8($fp)
-	nop
-	lw	$3,0($2)
 	li	$2,93			# 0x5d
-	bne	$3,$2,$L100
+	bne	$3,$2,$L95
 	nop
 
 	li	$3,772			# 0x304
 	li	$2,29			# 0x1d
 	sw	$2,0($3)
-	j	$L89
+	j	$L84
 	nop
 
-$L100:
+$L95:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,32
-	bne	$2,$0,$L102
+	bne	$2,$0,$L97
 	nop
 
 	lw	$2,8($fp)
@@ -952,7 +898,7 @@ $L100:
 	lw	$2,0($2)
 	nop
 	sltu	$2,$2,48
-	beq	$2,$0,$L102
+	beq	$2,$0,$L97
 	nop
 
 	li	$2,772			# 0x304
@@ -961,83 +907,83 @@ $L100:
 	lw	$3,0($3)
 	nop
 	sw	$3,0($2)
-	j	$L89
+	j	$L84
+	nop
+
+$L97:
+	lw	$2,8($fp)
+	nop
+	lw	$3,0($2)
+	li	$2,63			# 0x3f
+	bne	$3,$2,$L100
+	nop
+
+	li	$3,772			# 0x304
+	li	$2,58			# 0x3a
+	sw	$2,0($3)
+	j	$L84
+	nop
+
+$L100:
+	lw	$2,8($fp)
+	nop
+	lw	$3,0($2)
+	li	$2,61			# 0x3d
+	bne	$3,$2,$L102
+	nop
+
+	li	$3,772			# 0x304
+	li	$2,59			# 0x3b
+	sw	$2,0($3)
+	j	$L84
 	nop
 
 $L102:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
-	li	$2,63			# 0x3f
-	bne	$3,$2,$L105
-	nop
-
-	li	$3,772			# 0x304
-	li	$2,58			# 0x3a
-	sw	$2,0($3)
-	j	$L89
-	nop
-
-$L105:
-	lw	$2,8($fp)
-	nop
-	lw	$3,0($2)
-	li	$2,61			# 0x3d
-	bne	$3,$2,$L107
-	nop
-
-	li	$3,772			# 0x304
 	li	$2,59			# 0x3b
-	sw	$2,0($3)
-	j	$L89
-	nop
-
-$L107:
-	lw	$2,8($fp)
-	nop
-	lw	$3,0($2)
-	li	$2,59			# 0x3b
-	bne	$3,$2,$L109
+	bne	$3,$2,$L104
 	nop
 
 	li	$3,772			# 0x304
 	li	$2,60			# 0x3c
 	sw	$2,0($3)
-	j	$L89
+	j	$L84
 	nop
 
-$L109:
+$L104:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
 	li	$2,58			# 0x3a
-	bne	$3,$2,$L111
+	bne	$3,$2,$L106
 	nop
 
 	li	$3,772			# 0x304
 	li	$2,61			# 0x3d
 	sw	$2,0($3)
-	j	$L89
+	j	$L84
 	nop
 
-$L111:
+$L106:
 	lw	$2,8($fp)
 	nop
 	lw	$3,0($2)
 	li	$2,10			# 0xa
-	bne	$3,$2,$L113
+	bne	$3,$2,$L108
 	nop
 
 	li	$3,772			# 0x304
 	li	$2,62			# 0x3e
 	sw	$2,0($3)
-	j	$L89
+	j	$L84
 	nop
 
-$L113:
+$L108:
 	li	$2,772			# 0x304
 	sw	$0,0($2)
-$L89:
+$L84:
 	li	$3,768			# 0x300
 	li	$2,1			# 0x1
 	sw	$2,0($3)
@@ -1045,12 +991,12 @@ $L89:
 	nop
 	addiu	$2,$2,4
 	sw	$2,8($fp)
-$L84:
+$L79:
 	lw	$2,8($fp)
 	nop
 	lw	$2,0($2)
 	nop
-	bne	$2,$0,$L85
+	bne	$2,$0,$L80
 	nop
 
 	move	$sp,$fp

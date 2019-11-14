@@ -25,6 +25,11 @@
 `define     ALU_CTRL_MULT 4'b1011
 `define     ALU_CTRL_MFLO 4'b1100
 
+`define     ALU_CTRL_DIVU 4'b0001
+`define     ALU_CTRL_MFHI 4'b0101
+
+
+
 
 //           命令,         ALUOp(alu_op),  命令機能コード(func), ALU 制御コード
 //     lw(load word),           000,         xxxxxx,             0010(add)
@@ -127,7 +132,10 @@ module alu_ctrler (alu_op, func, alu_ctrl);  // 入出力ポート
           y = `ALU_CTRL_MFLO;
         end else if (func == 6'b011000) begin // func=MULT
           y = `ALU_CTRL_MULT;
-
+        end else if (func == 6'b011011) begin // func=DIVU
+          y = `ALU_CTRL_DIVU;
+        end else if (func == 6'b010000) begin // func=MUHI
+          y = `ALU_CTRL_MFHI;
         end else begin
           y = 3'b000;
         end

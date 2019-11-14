@@ -1,6 +1,7 @@
 v1
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult5,
 IO_RULES,NUM_PINS_NOT_EXCEED_LOC_AVAILABLE,PASS,IO_000001,Capacity Checks,Number of pins in an I/O bank should not exceed the number of locations available.,Critical,0 such failures found.,,I/O,,

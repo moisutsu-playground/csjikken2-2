@@ -16,8 +16,6 @@ void my_i2a();
 void my_print();
 void my_scan();
 
-unsigned int my_mod(unsigned int a, unsigned int b);
-
 main() {
   unsigned int i;
   unsigned int k;
@@ -71,19 +69,6 @@ main() {
   }
 }
 
-unsigned int my_mod(unsigned int a, unsigned int b){
-  unsigned int tmp_y;
-  unsigned int tmp_a;
-  tmp_a = a;
-  while (1) {
-    tmp_y = tmp_a;
-    if (tmp_a < b) {
-      return tmp_y;
-    }
-    tmp_a = tmp_a - b;
-  }
-}
-
 /* unsigned int kouho の素数判定を行う関数 */
 /* 素数なら TRUE を返す */
 /* 素数でないなら FALSE を返す */
@@ -95,9 +80,9 @@ unsigned int sosuu_check(unsigned int kouho) {
     return FALSE;
   } else {
     result = TRUE;
-    for (tester = 3; tester < kouho / 2; tester += 2) {
+    for (tester = 3; tester < kouho/2; tester += 2) {
       /* kouho が本当に素数かどうかをチェック */
-      if (my_mod(kouho, tester) == 0) {
+      if ((kouho % tester) == 0) {
         /* kouho は tester の倍数である */
         result = FALSE;
       }

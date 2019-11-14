@@ -15,10 +15,9 @@
 
 /*
   実験 9 ヒント（１）：整数乗算命令 mult, ムーブ・フロム・Lo 命令 mflo についてのコメント追加
-  `defineR  6'b000000    R形式(add, addu, sub, subu, and, or, slt,jalr, jr, mult, mflo)
   実験 10 ヒント（１）：符号なし除算命令 divu, ムーブ・フロム・Hi 命令 mfhi についてのコメント追加
 
-  `define      R  6'b000000    R 形式 (add, addu, sub, subu, and, or, slt, jalr, jr)
+  `define      R  6'b000000    R 形式 (add, addu, sub, subu, and, or, slt, jalr, jr, mult, mflo, divu, mfhi)
   `define     LW  6'b100011    load word (I 形式)
   `define   ADDI  6'b001000    add immediate (I 形式)
   `define  ADDIU  6'b001001    add immediate, unsigned (I 形式)
@@ -113,10 +112,12 @@
    MFLO      REG[rd]  <= Lo;                    MFLO rd
 
    実験 10 ヒント（２）：符号なし除算命令 divu についてのコメント追加
-   ...
+   DIVU(op = 000000, func = 011011)
+   DIVU Hi <=  REG[rs] % REG[rt]; LO <= REG[rs] / REG[rt]; DIVU rs,rt 
 
    実験 10 ヒント（３）：ムーブ・フロム・Hi 命令 mfhi についてのコメント追加
-   ...
+   MFHI(op = 000000, func= 010000)
+   MFHI      REG[rd]  <= Hi;                               MFHI rd
 
    I 形式
    31      26 25    21 20   16 15                     0 
@@ -227,8 +228,8 @@
 
 // 実験 10 ヒント（４）：ムーブ・フロム・Hi 命令 mfhi の func コードの define
 
-//#define    DIVU XX
-//#define    MFHI XX
+#define    DIVU 27
+#define    MFHI 16
 
 #define   BGEZ   1
 #define   BLTZ   0
@@ -535,12 +536,16 @@ void fprint_sim(FILE *outfp, volatile unsigned int wd, unsigned int op_cnt) {
 			break;
 
 			// 実験 10 ヒント（５）：符号なし除算命令 divu に関する rom8x1024_sim.v 生成用の記述
-			//		case DIVU:
-			//			break;
+		case DIVU:
+			fprintf(outfp, "10'h%03x: data = 32'h%08x; // %08x: DIVU, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "Hi <=  REG[rs] mod REG[rt]; LO <= REG[rs] / REG[rt];\n", rs, rt);	
+			break;
 
 			// 実験 10 ヒント（６）：ムーブ・フロム・Hi 命令 mfhi に関する rom8x1024_sim.v 生成用の記述 
-			//		case MFHI:
-			//			break;	  
+		case MFHI:
+			fprintf(outfp, "10'h%03x: data = 32'h%08x; // %08x: MFHI, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "REG[%d]<=Hi;\n", rd);
+			break;	  
 
 		default:
 			fprintf(outfp, "10'h%03x: data = 32'h%08x; // %08x: R type, unknown. ", rom_addr, wd, cmt_addr);
@@ -779,12 +784,16 @@ void fprint_mif(FILE *outfp, unsigned int wd, unsigned int op_cnt) {
 			break;
 	  
 			// 実験 10 ヒント（７）：符号なし除算命令 divu に関する rom8x1024_DE2.mif 生成用の記述
-			//		case DIVU:
-			//			break;
+		case DIVU:
+			fprintf(outfp, "%03x : %08x ; %% %08x: DIVU, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "Hi <=  REG[rs] mod REG[rt]; LO <= REG[rs] / REG[rt]; %%\n", rs, rt);
+			break;
 
 			// 実験 10 ヒント（８）：ムーブ・フロム・Hi 命令 mfhi に関する rom8x1024_DE2.mif 生成用の記述 
-			//		case MFHI:
-			//			break;
+		case MFHI:
+			fprintf(outfp, "%03x : %08x ; %% %08x: MFHI, ", rom_addr, wd, cmt_addr);
+			fprintf(outfp, "REG[%d]<=Hi; %%\n", rd);			
+			break;
 	  
 		default:
 			fprintf(outfp, "%03x : %08x ; %% %08x: R type, unknown. %% ", rom_addr, wd, cmt_addr);

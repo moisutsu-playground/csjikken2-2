@@ -381,9 +381,7 @@ module main_ctrl (instruction,
 // 更に、追加設計 4 のヒント(2)：J 形式の命令 JAL (jump and link) の追加、jp_sel モジュールへの制御信号の記述
 //
   assign  jp = ((op_code == `J) || (op_code == `JAL)) ? 1'b1 : 1'b0;
-//
-//
-//
+
 //
 //
 //

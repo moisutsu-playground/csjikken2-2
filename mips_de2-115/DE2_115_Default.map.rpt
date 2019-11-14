@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_Default
-Thu Nov  7 14:28:21 2019
+Thu Nov 14 15:05:18 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,27 +48,29 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  40. Parameter Settings for User Entity Instance: cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component
  41. Parameter Settings for Inferred Entity Instance: VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0
  42. Parameter Settings for Inferred Entity Instance: cpu:u9|alu:alua|lpm_mult:Mult0
- 43. altpll Parameter Settings by Entity Instance
- 44. altsyncram Parameter Settings by Entity Instance
- 45. altshift_taps Parameter Settings by Entity Instance
- 46. lpm_mult Parameter Settings by Entity Instance
- 47. Port Connectivity Checks: "cpu:u9|shifter32_32_l2:shifter32_32_l2b"
- 48. Port Connectivity Checks: "cpu:u9|mux5_5_5:reg_widx_sel2"
- 49. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_a_sel_1"
- 50. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_b_sel_2"
- 51. Port Connectivity Checks: "cpu:u9"
- 52. Port Connectivity Checks: "VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component"
- 53. Port Connectivity Checks: "VGA_CHAR_RAM:u7"
- 54. Port Connectivity Checks: "KEYBOARD_DEC:u6"
- 55. Port Connectivity Checks: "AUDIO_DAC:u4"
- 56. Port Connectivity Checks: "I2C_AV_Config:u3|I2C_Controller:u0"
- 57. Port Connectivity Checks: "VGA_OSD_RAM:u2"
- 58. Port Connectivity Checks: "VGA_Controller:u1"
- 59. Port Connectivity Checks: "SEG7_LUT_8:u0"
- 60. Port Connectivity Checks: "VGA_Audio_PLL:p1"
- 61. Elapsed Time Per Partition
- 62. Analysis & Synthesis Messages
- 63. Analysis & Synthesis Suppressed Messages
+ 43. Parameter Settings for Inferred Entity Instance: cpu:u9|alu:alua|lpm_divide:Mod0
+ 44. Parameter Settings for Inferred Entity Instance: cpu:u9|alu:alua|lpm_divide:Div0
+ 45. altpll Parameter Settings by Entity Instance
+ 46. altsyncram Parameter Settings by Entity Instance
+ 47. altshift_taps Parameter Settings by Entity Instance
+ 48. lpm_mult Parameter Settings by Entity Instance
+ 49. Port Connectivity Checks: "cpu:u9|shifter32_32_l2:shifter32_32_l2b"
+ 50. Port Connectivity Checks: "cpu:u9|mux5_5_5:reg_widx_sel2"
+ 51. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_a_sel_1"
+ 52. Port Connectivity Checks: "cpu:u9|mux32_32_32:alu_b_sel_2"
+ 53. Port Connectivity Checks: "cpu:u9"
+ 54. Port Connectivity Checks: "VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component"
+ 55. Port Connectivity Checks: "VGA_CHAR_RAM:u7"
+ 56. Port Connectivity Checks: "KEYBOARD_DEC:u6"
+ 57. Port Connectivity Checks: "AUDIO_DAC:u4"
+ 58. Port Connectivity Checks: "I2C_AV_Config:u3|I2C_Controller:u0"
+ 59. Port Connectivity Checks: "VGA_OSD_RAM:u2"
+ 60. Port Connectivity Checks: "VGA_Controller:u1"
+ 61. Port Connectivity Checks: "SEG7_LUT_8:u0"
+ 62. Port Connectivity Checks: "VGA_Audio_PLL:p1"
+ 63. Elapsed Time Per Partition
+ 64. Analysis & Synthesis Messages
+ 65. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -94,19 +96,19 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov  7 14:28:20 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 14 15:05:18 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_Default                                 ;
 ; Top-level Entity Name              ; DE2_115_Default                                 ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 6,013                                           ;
-;     Total combinational functions  ; 4,483                                           ;
-;     Dedicated logic registers      ; 2,170                                           ;
-; Total registers                    ; 2170                                            ;
+; Total logic elements               ; 8,277                                           ;
+;     Total combinational functions  ; 6,765                                           ;
+;     Dedicated logic registers      ; 2,202                                           ;
+; Total registers                    ; 2202                                            ;
 ; Total pins                         ; 480                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 418,390                                         ;
-; Embedded Multiplier 9-bit elements ; 6                                               ;
+; Embedded Multiplier 9-bit elements ; 8                                               ;
 ; Total PLLs                         ; 1                                               ;
 +------------------------------------+-------------------------------------------------+
 
@@ -264,7 +266,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altram.inc                       ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc               ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc             ;         ;
 ; db/altsyncram_cco1.tdf           ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/altsyncram_cco1.tdf          ;         ;
-; VGA_Controller/Img_DATA.hex      ; yes             ; Auto-Found Memory Initialization File  ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/VGA_Controller/Img_DATA.hex     ;         ;
 ; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/decode_hua.tdf               ;         ;
 ; db/decode_aaa.tdf                ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/decode_aaa.tdf               ;         ;
 ; db/mux_1pb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/mux_1pb.tdf                  ;         ;
@@ -297,6 +298,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; bypassff.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc             ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc             ;         ;
 ; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/mult_7dt.tdf                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf           ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc          ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; /pub1/jikken/eda3/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc      ;         ;
+; db/lpm_divide_kcm.tdf            ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/lpm_divide_kcm.tdf           ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/sign_div_unsign_9nh.tdf      ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/alt_u_div_6af.tdf            ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/add_sub_7pc.tdf              ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/add_sub_8pc.tdf              ;         ;
+; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction            ; /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/db/lpm_divide_hkm.tdf           ;         ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
@@ -305,112 +315,121 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 6,013        ;
+; Estimated Total logic elements              ; 8,277        ;
 ;                                             ;              ;
-; Total combinational functions               ; 4483         ;
+; Total combinational functions               ; 6765         ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 3327         ;
-;     -- 3 input functions                    ; 728          ;
-;     -- <=2 input functions                  ; 428          ;
+;     -- 4 input functions                    ; 4421         ;
+;     -- 3 input functions                    ; 1816         ;
+;     -- <=2 input functions                  ; 528          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 4043         ;
-;     -- arithmetic mode                      ; 440          ;
+;     -- normal mode                          ; 5224         ;
+;     -- arithmetic mode                      ; 1541         ;
 ;                                             ;              ;
-; Total registers                             ; 2170         ;
-;     -- Dedicated logic registers            ; 2170         ;
+; Total registers                             ; 2202         ;
+;     -- Dedicated logic registers            ; 2202         ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 480          ;
 ; Total memory bits                           ; 418390       ;
-; Embedded Multiplier 9-bit elements          ; 6            ;
+; Embedded Multiplier 9-bit elements          ; 8            ;
 ; Total PLLs                                  ; 1            ;
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[2]~input ;
-; Maximum fan-out                             ; 1912         ;
-; Total fan-out                               ; 27555        ;
-; Average fan-out                             ; 3.49         ;
+; Maximum fan-out                             ; 1944         ;
+; Total fan-out                               ; 35429        ;
+; Average fan-out                             ; 3.47         ;
 +---------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                        ;
-+----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Library Name ;
-+----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_115_Default                                   ; 4483 (33)         ; 2170 (62)    ; 418390      ; 6            ; 0       ; 3         ; 480  ; 0            ; |DE2_115_Default                                                                                                                           ; work         ;
-;    |AUDIO_DAC:u4|                                  ; 102 (102)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|AUDIO_DAC:u4                                                                                                              ; work         ;
-;    |I2C_AV_Config:u3|                              ; 134 (85)          ; 75 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3                                                                                                          ; work         ;
-;       |I2C_Controller:u0|                          ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0                                                                                        ; work         ;
-;    |KEYBOARD_DEC:u6|                               ; 69 (69)           ; 33 (33)      ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6                                                                                                           ; work         ;
-;       |lpm_rom:lpm_rom_component|                  ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component                                                                                 ; work         ;
-;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom                                                                     ; work         ;
-;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                                ; work         ;
-;                |altsyncram_na01:auto_generated|    ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_na01:auto_generated                 ; work         ;
-;    |LCD_TEST:u5|                                   ; 97 (76)           ; 51 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|LCD_TEST:u5                                                                                                               ; work         ;
-;       |LCD_Controller:u0|                          ; 21 (21)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0                                                                                             ; work         ;
-;    |Reset_Delay:r0|                                ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|Reset_Delay:r0                                                                                                            ; work         ;
-;    |SEG7_LUT_8:u0|                                 ; 42 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0                                                                                                             ; work         ;
-;       |SEG7_LUT:u0|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u0                                                                                                 ; work         ;
-;       |SEG7_LUT:u1|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u1                                                                                                 ; work         ;
-;       |SEG7_LUT:u2|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u2                                                                                                 ; work         ;
-;       |SEG7_LUT:u5|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u5                                                                                                 ; work         ;
-;       |SEG7_LUT:u6|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u6                                                                                                 ; work         ;
-;       |SEG7_LUT:u7|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u7                                                                                                 ; work         ;
-;    |VGA_Audio_PLL:p1|                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1                                                                                                          ; work         ;
-;       |altpll:altpll_component|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                  ; work         ;
-;          |altpll_k3n2:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component|altpll_k3n2:auto_generated                                                       ; work         ;
-;    |VGA_CHAR_Ctrl:u8|                              ; 664 (664)         ; 726 (726)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_Ctrl:u8                                                                                                          ; work         ;
-;    |VGA_CHAR_RAM:u7|                               ; 42 (42)           ; 6 (6)        ; 11296       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7                                                                                                           ; work         ;
-;       |char30x40_ram:char30x40_ram_component|      ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component                                                                     ; work         ;
-;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component                                     ; work         ;
-;             |altsyncram_e9b1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component|altsyncram_e9b1:auto_generated      ; work         ;
-;       |lpm_rom:lpm_rom_component|                  ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component                                                                                 ; work         ;
-;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom                                                                     ; work         ;
-;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                                ; work         ;
-;                |altsyncram_b801:auto_generated|    ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_b801:auto_generated                 ; work         ;
-;    |VGA_Controller:u1|                             ; 104 (104)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Controller:u1                                                                                                         ; work         ;
-;    |VGA_OSD_RAM:u2|                                ; 338 (8)           ; 28 (10)      ; 307254      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2                                                                                                            ; work         ;
-;       |Img_RAM:u0|                                 ; 321 (0)           ; 12 (0)       ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0                                                                                                 ; work         ;
-;          |altsyncram:altsyncram_component|         ; 321 (0)           ; 12 (0)       ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component                                                                 ; work         ;
-;             |altsyncram_cco1:auto_generated|       ; 321 (0)           ; 12 (12)      ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated                                  ; work         ;
-;                |decode_aaa:rden_decode_b|          ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|decode_aaa:rden_decode_b         ; work         ;
-;                |decode_hua:decode2|                ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|decode_hua:decode2               ; work         ;
-;                |mux_1pb:mux3|                      ; 234 (234)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|mux_1pb:mux3                     ; work         ;
-;       |altshift_taps:WR_ADDR_d_rtl_0|              ; 9 (0)             ; 6 (0)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0                                                                              ; work         ;
-;          |shift_taps_gkm:auto_generated|           ; 9 (2)             ; 6 (3)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated                                                ; work         ;
-;             |altsyncram_5961:altsyncram4|          ; 0 (0)             ; 0 (0)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|altsyncram_5961:altsyncram4                    ; work         ;
-;             |cntr_6pf:cntr1|                       ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_6pf:cntr1                                 ; work         ;
-;             |cntr_p8h:cntr5|                       ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_p8h:cntr5                                 ; work         ;
-;    |cpu:u9|                                        ; 2731 (64)         ; 1081 (25)    ; 98304       ; 6            ; 0       ; 3         ; 0    ; 0            ; |DE2_115_Default|cpu:u9                                                                                                                    ; work         ;
-;       |adder32:pc_add|                             ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|adder32:pc_add                                                                                                     ; work         ;
-;       |alu:alua|                                   ; 933 (919)         ; 32 (32)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua                                                                                                           ; work         ;
-;          |lpm_mult:Mult0|                          ; 14 (0)            ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_mult:Mult0                                                                                            ; work         ;
-;             |mult_7dt:auto_generated|              ; 14 (14)           ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated                                                                    ; work         ;
-;       |alu_ctrler:alu_ctrlera|                     ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu_ctrler:alu_ctrlera                                                                                             ; work         ;
-;       |is_branch:is_brancha|                       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|is_branch:is_brancha                                                                                               ; work         ;
-;       |main_ctrl:main_ctrla|                       ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla                                                                                               ; work         ;
-;       |mux32_32_32:alu_a_sel_1|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_a_sel_1                                                                                            ; work         ;
-;       |mux32_32_32:alu_b_sel_2|                    ; 51 (51)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2                                                                                            ; work         ;
-;       |mux32_32_32:alu_ram_sel|                    ; 50 (50)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_ram_sel                                                                                            ; work         ;
-;       |mux32_32_32:jpr_sel|                        ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:jpr_sel                                                                                                ; work         ;
-;       |mux32_32_32:link_sel|                       ; 50 (50)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel                                                                                               ; work         ;
-;       |mux5_5_5:reg_widx_sel2|                     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2                                                                                             ; work         ;
-;       |pc:pca|                                     ; 2 (2)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|pc:pca                                                                                                             ; work         ;
-;       |plus4:pc_plus4|                             ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|plus4:pc_plus4                                                                                                     ; work         ;
-;       |ram8x2048_DE2:ram8x2048a|                   ; 34 (34)           ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a                                                                                           ; work         ;
-;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component                                                           ; work         ;
-;             |altsyncram_28b1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component|altsyncram_28b1:auto_generated                            ; work         ;
-;       |registers:register_file|                    ; 1332 (1332)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|registers:register_file                                                                                            ; work         ;
-;       |rom8x1024_DE2:rom8x1024a|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a                                                                                           ; work         ;
-;          |lpm_rom:lpm_rom_component|               ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component                                                                 ; work         ;
-;             |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom                                                     ; work         ;
-;                |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                ; work         ;
-;                   |altsyncram_ol01:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated ; work         ;
-;       |signext16_32:signext16_32a|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|signext16_32:signext16_32a                                                                                         ; work         ;
-;    |update_monitor_rom:update_rom|                 ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|update_monitor_rom:update_rom                                                                                             ; work         ;
-+----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                    ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                    ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |DE2_115_Default                                   ; 6765 (33)         ; 2202 (62)    ; 418390      ; 8            ; 0       ; 4         ; 480  ; 0            ; |DE2_115_Default                                                                                                                                       ; work         ;
+;    |AUDIO_DAC:u4|                                  ; 102 (102)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|AUDIO_DAC:u4                                                                                                                          ; work         ;
+;    |I2C_AV_Config:u3|                              ; 134 (85)          ; 75 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3                                                                                                                      ; work         ;
+;       |I2C_Controller:u0|                          ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0                                                                                                    ; work         ;
+;    |KEYBOARD_DEC:u6|                               ; 70 (70)           ; 33 (33)      ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6                                                                                                                       ; work         ;
+;       |lpm_rom:lpm_rom_component|                  ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component                                                                                             ; work         ;
+;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom                                                                                 ; work         ;
+;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                                            ; work         ;
+;                |altsyncram_na01:auto_generated|    ; 0 (0)             ; 0 (0)        ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_na01:auto_generated                             ; work         ;
+;    |LCD_TEST:u5|                                   ; 97 (76)           ; 51 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|LCD_TEST:u5                                                                                                                           ; work         ;
+;       |LCD_Controller:u0|                          ; 21 (21)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0                                                                                                         ; work         ;
+;    |Reset_Delay:r0|                                ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|Reset_Delay:r0                                                                                                                        ; work         ;
+;    |SEG7_LUT_8:u0|                                 ; 42 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0                                                                                                                         ; work         ;
+;       |SEG7_LUT:u0|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u0                                                                                                             ; work         ;
+;       |SEG7_LUT:u1|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u1                                                                                                             ; work         ;
+;       |SEG7_LUT:u2|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u2                                                                                                             ; work         ;
+;       |SEG7_LUT:u5|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u5                                                                                                             ; work         ;
+;       |SEG7_LUT:u6|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u6                                                                                                             ; work         ;
+;       |SEG7_LUT:u7|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|SEG7_LUT_8:u0|SEG7_LUT:u7                                                                                                             ; work         ;
+;    |VGA_Audio_PLL:p1|                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1                                                                                                                      ; work         ;
+;       |altpll:altpll_component|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                              ; work         ;
+;          |altpll_k3n2:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component|altpll_k3n2:auto_generated                                                                   ; work         ;
+;    |VGA_CHAR_Ctrl:u8|                              ; 653 (653)         ; 726 (726)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_Ctrl:u8                                                                                                                      ; work         ;
+;    |VGA_CHAR_RAM:u7|                               ; 42 (42)           ; 6 (6)        ; 11296       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7                                                                                                                       ; work         ;
+;       |char30x40_ram:char30x40_ram_component|      ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component                                                                                 ; work         ;
+;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component                                                 ; work         ;
+;             |altsyncram_e9b1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 7200        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component|altsyncram:altsyncram_component|altsyncram_e9b1:auto_generated                  ; work         ;
+;       |lpm_rom:lpm_rom_component|                  ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component                                                                                             ; work         ;
+;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom                                                                                 ; work         ;
+;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                                            ; work         ;
+;                |altsyncram_b801:auto_generated|    ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_CHAR_RAM:u7|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_b801:auto_generated                             ; work         ;
+;    |VGA_Controller:u1|                             ; 104 (104)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_Controller:u1                                                                                                                     ; work         ;
+;    |VGA_OSD_RAM:u2|                                ; 338 (8)           ; 28 (10)      ; 307254      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2                                                                                                                        ; work         ;
+;       |Img_RAM:u0|                                 ; 321 (0)           ; 12 (0)       ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0                                                                                                             ; work         ;
+;          |altsyncram:altsyncram_component|         ; 321 (0)           ; 12 (0)       ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component                                                                             ; work         ;
+;             |altsyncram_cco1:auto_generated|       ; 321 (0)           ; 12 (12)      ; 307200      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated                                              ; work         ;
+;                |decode_aaa:rden_decode_b|          ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|decode_aaa:rden_decode_b                     ; work         ;
+;                |decode_hua:decode2|                ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|decode_hua:decode2                           ; work         ;
+;                |mux_1pb:mux3|                      ; 234 (234)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|mux_1pb:mux3                                 ; work         ;
+;       |altshift_taps:WR_ADDR_d_rtl_0|              ; 9 (0)             ; 6 (0)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0                                                                                          ; work         ;
+;          |shift_taps_gkm:auto_generated|           ; 9 (2)             ; 6 (3)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated                                                            ; work         ;
+;             |altsyncram_5961:altsyncram4|          ; 0 (0)             ; 0 (0)        ; 54          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|altsyncram_5961:altsyncram4                                ; work         ;
+;             |cntr_6pf:cntr1|                       ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_6pf:cntr1                                             ; work         ;
+;             |cntr_p8h:cntr5|                       ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0|shift_taps_gkm:auto_generated|cntr_p8h:cntr5                                             ; work         ;
+;    |cpu:u9|                                        ; 5024 (65)         ; 1113 (25)    ; 98304       ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_115_Default|cpu:u9                                                                                                                                ; work         ;
+;       |adder32:pc_add|                             ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|adder32:pc_add                                                                                                                 ; work         ;
+;       |alu:alua|                                   ; 3204 (981)        ; 64 (64)      ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua                                                                                                                       ; work         ;
+;          |lpm_divide:Div0|                         ; 1048 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Div0                                                                                                       ; work         ;
+;             |lpm_divide_hkm:auto_generated|        ; 1048 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; work         ;
+;                |sign_div_unsign_9nh:divider|       ; 1048 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
+;                   |alt_u_div_6af:divider|          ; 1048 (1048)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; work         ;
+;          |lpm_divide:Mod0|                         ; 1096 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Mod0                                                                                                       ; work         ;
+;             |lpm_divide_kcm:auto_generated|        ; 1096 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; work         ;
+;                |sign_div_unsign_9nh:divider|       ; 1096 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
+;                   |alt_u_div_6af:divider|          ; 1096 (1095)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; work         ;
+;                      |add_sub_8pc:add_sub_1|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; work         ;
+;          |lpm_mult:Mult0|                          ; 79 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_mult:Mult0                                                                                                        ; work         ;
+;             |mult_7dt:auto_generated|              ; 79 (79)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; work         ;
+;       |alu_ctrler:alu_ctrlera|                     ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|alu_ctrler:alu_ctrlera                                                                                                         ; work         ;
+;       |is_branch:is_brancha|                       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|is_branch:is_brancha                                                                                                           ; work         ;
+;       |main_ctrl:main_ctrla|                       ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla                                                                                                           ; work         ;
+;       |mux32_32_32:alu_a_sel_1|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_a_sel_1                                                                                                        ; work         ;
+;       |mux32_32_32:alu_b_sel_2|                    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2                                                                                                        ; work         ;
+;       |mux32_32_32:alu_ram_sel|                    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_ram_sel                                                                                                        ; work         ;
+;       |mux32_32_32:jpr_sel|                        ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:jpr_sel                                                                                                            ; work         ;
+;       |mux32_32_32:link_sel|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux32_32_32:link_sel                                                                                                           ; work         ;
+;       |mux5_5_5:reg_widx_sel2|                     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2                                                                                                         ; work         ;
+;       |pc:pca|                                     ; 2 (2)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|pc:pca                                                                                                                         ; work         ;
+;       |plus4:pc_plus4|                             ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|plus4:pc_plus4                                                                                                                 ; work         ;
+;       |ram8x2048_DE2:ram8x2048a|                   ; 57 (57)           ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a                                                                                                       ; work         ;
+;          |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component                                                                       ; work         ;
+;             |altsyncram_28b1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component|altsyncram_28b1:auto_generated                                        ; work         ;
+;       |registers:register_file|                    ; 1328 (1328)       ; 992 (992)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|registers:register_file                                                                                                        ; work         ;
+;       |rom8x1024_DE2:rom8x1024a|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a                                                                                                       ; work         ;
+;          |lpm_rom:lpm_rom_component|               ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component                                                                             ; work         ;
+;             |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom                                                                 ; work         ;
+;                |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block                                            ; work         ;
+;                   |altsyncram_ol01:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated             ; work         ;
+;       |signext16_32:signext16_32a|                 ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|cpu:u9|signext16_32:signext16_32a                                                                                                     ; work         ;
+;    |update_monitor_rom:update_rom|                 ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_Default|update_monitor_rom:update_rom                                                                                                         ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -435,11 +454,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
 ; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 3           ;
+; Simple Multipliers (18-bit)           ; 4           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 6           ;
+; Embedded Multiplier 9-bit elements    ; 8           ;
 ; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 3           ;
+; Unsigned Embedded Multipliers         ; 4           ;
 ; Mixed Sign Embedded Multipliers       ; 0           ;
 ; Variable Sign Embedded Multipliers    ; 0           ;
 ; Dedicated Input Shift Register Chains ; 0           ;
@@ -777,12 +796,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2170  ;
+; Total registers                              ; 2202  ;
 ; Number of registers using Synchronous Clear  ; 115   ;
 ; Number of registers using Synchronous Load   ; 27    ;
-; Number of registers using Asynchronous Clear ; 2056  ;
+; Number of registers using Asynchronous Clear ; 2088  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1667  ;
+; Number of registers using Clock Enable       ; 1699  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -831,32 +850,33 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[1]                           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|mStart              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[31]                          ;
-; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[15]                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_Default|LCD_TEST:u5|LCD_Controller:u0|oDone               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[28]                          ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_Default|cpu:u9|pc:pca|pc_reg[27]                          ;
+; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |DE2_115_Default|cpu:u9|alu:alua|hi[30]                            ;
 ; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_reg[4]                  ;
-; 37:1               ; 5 bits    ; 120 LEs       ; 50 LEs               ; 70 LEs                 ; Yes        ; |DE2_115_Default|KEYBOARD_DEC:u6|key_ascii_reg[2]                  ;
+; 37:1               ; 5 bits    ; 120 LEs       ; 50 LEs               ; 70 LEs                 ; Yes        ; |DE2_115_Default|KEYBOARD_DEC:u6|key_ascii_reg[1]                  ;
 ; 67:1               ; 6 bits    ; 264 LEs       ; 132 LEs              ; 132 LEs                ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|RAM_WDATA_reg[4]                 ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 12 LEs               ; 30 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|reg_idx[1]                       ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosCol_reg[0]             ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[4]             ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[2]             ;
-; 84:1               ; 2 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_src_tmp[3]              ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[1]  ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 12 LEs               ; 30 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|reg_idx[2]                       ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosCol_reg[3]             ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[3]             ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|CurrentPosRow_reg[0]             ;
+; 84:1               ; 2 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|PUT_DATA_src_tmp[2]              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_Default|I2C_AV_Config:u3|I2C_Controller:u0|SD_COUNTER[0]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|main_st_reg                      ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux5_5_5:reg_widx_sel2|y[3]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2|y[15]              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[12]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE2_115_Default|cpu:u9|mux32_32_32:alu_b_sel_2|y[10]              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[14]            ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |DE2_115_Default|update_monitor_rom:update_rom|data[7]             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data1[29] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data2[6]  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data1[11] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |DE2_115_Default|cpu:u9|registers:register_file|reg_read_data2[1]  ;
 ; 64:1               ; 2 bits    ; 84 LEs        ; 16 LEs               ; 68 LEs                 ; No         ; |DE2_115_Default|cpu:u9|main_ctrl:main_ctrla|Selector1             ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DE2_115_Default|LCD_TEST:u5|mLCD_ST                               ;
-; 22:1               ; 7 bits    ; 98 LEs        ; 70 LEs               ; 28 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux38                             ;
-; 21:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux52                             ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 44 LEs               ; 16 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux37                             ;
-; 22:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux55                             ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux32                             ;
+; 22:1               ; 7 bits    ; 98 LEs        ; 70 LEs               ; 28 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux42                             ;
+; 21:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux48                             ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 44 LEs               ; 16 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux34                             ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux56                             ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux33                             ;
 ; 23:1               ; 2 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |DE2_115_Default|cpu:u9|alu:alua|Mux58                             ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |DE2_115_Default|VGA_CHAR_Ctrl:u8|scan_st_reg                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
@@ -1688,6 +1708,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cpu:u9|alu:alua|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                ;
+; LPM_WIDTHD             ; 32             ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_kcm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cpu:u9|alu:alua|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                ;
+; LPM_WIDTHD             ; 32             ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                             ;
 +-------------------------------+------------------------------------------+
@@ -1951,7 +2017,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:20     ;
+; Top            ; 00:00:22     ;
 +----------------+--------------+
 
 
@@ -1961,7 +2027,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov  7 14:27:52 2019
+    Info: Processing started: Thu Nov 14 15:04:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115_Default -c DE2_115_Default
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file VGA_CHAR_Ctrl.v
@@ -2191,7 +2257,6 @@ Warning (287001): Assertion warning: Device family Cyclone IV E does not have M4
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cco1.tdf
     Info (12023): Found entity 1: altsyncram_cco1
 Info (12128): Elaborating entity "altsyncram_cco1" for hierarchy "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated"
-Warning (113007): Byte addressed memory initialization file "Img_DATA.hex" was read in the word-addressed format
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_hua.tdf
     Info (12023): Found entity 1: decode_hua
 Info (12128): Elaborating entity "decode_hua" for hierarchy "VGA_OSD_RAM:u2|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_cco1:auto_generated|decode_hua:decode2"
@@ -2244,17 +2309,6 @@ Info (12131): Elaborated megafunction instantiation "KEYBOARD_DEC:u6|lpm_rom:lpm
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_na01.tdf
     Info (12023): Found entity 1: altsyncram_na01
 Info (12128): Elaborating entity "altsyncram_na01" for hierarchy "KEYBOARD_DEC:u6|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_na01:auto_generated"
-Warning (113031): 46 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 46 warnings found, and 10 warnings are reported.
-    Warning (113030): Memory Initialization File address 14 is reinitialized
-    Warning (113030): Memory Initialization File address 22 is reinitialized
-    Warning (113030): Memory Initialization File address 30 is reinitialized
-    Warning (113030): Memory Initialization File address 38 is reinitialized
-    Warning (113030): Memory Initialization File address 37 is reinitialized
-    Warning (113030): Memory Initialization File address 46 is reinitialized
-    Warning (113030): Memory Initialization File address 54 is reinitialized
-    Warning (113030): Memory Initialization File address 61 is reinitialized
-    Warning (113030): Memory Initialization File address 62 is reinitialized
-    Warning (113030): Memory Initialization File address 70 is reinitialized
 Info (12128): Elaborating entity "VGA_CHAR_RAM" for hierarchy "VGA_CHAR_RAM:u7"
 Warning (10230): Verilog HDL assignment warning at VGA_CHAR_RAM.v(41): truncated value with size 32 to match size of target (11)
 Info (12128): Elaborating entity "char30x40_ram" for hierarchy "VGA_CHAR_RAM:u7|char30x40_ram:char30x40_ram_component"
@@ -2357,7 +2411,7 @@ Info (12131): Elaborated megafunction instantiation "cpu:u9|rom8x1024_DE2:rom8x1
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ol01.tdf
     Info (12023): Found entity 1: altsyncram_ol01
 Info (12128): Elaborating entity "altsyncram_ol01" for hierarchy "cpu:u9|rom8x1024_DE2:rom8x1024a|lpm_rom:lpm_rom_component|altrom:srom|altsyncram:rom_block|altsyncram_ol01:auto_generated"
-Warning (113031): 52 out of 1024 addresses are reinitialized. The latest initialized data will replace the existing data. There are 52 warnings found, and 10 warnings are reported.
+Warning (113031): 780 out of 1024 addresses are reinitialized. The latest initialized data will replace the existing data. There are 780 warnings found, and 10 warnings are reported.
     Warning (113030): Memory Initialization File address 0 is reinitialized
     Warning (113030): Memory Initialization File address 1 is reinitialized
     Warning (113030): Memory Initialization File address 2 is reinitialized
@@ -2388,9 +2442,9 @@ Info (12133): Instantiated megafunction "cpu:u9|ram8x2048_DE2:ram8x2048a|altsync
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_28b1.tdf
     Info (12023): Found entity 1: altsyncram_28b1
 Info (12128): Elaborating entity "altsyncram_28b1" for hierarchy "cpu:u9|ram8x2048_DE2:ram8x2048a|altsyncram:altsyncram_component|altsyncram_28b1:auto_generated"
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File /mdhome/home5/uk6057965/csjikken/csjikken2-2/mips_de2-115/ram8x2048_DE2.mif -- setting all initial values to 0
 Info (12128): Elaborating entity "alu" for hierarchy "cpu:u9|alu:alua"
-Warning (10235): Verilog HDL Always Construct warning at alu.v(394): variable "lo" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(406): variable "lo" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(410): variable "hi" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (12128): Elaborating entity "pc" for hierarchy "cpu:u9|pc:pca"
 Info (12128): Elaborating entity "registers" for hierarchy "cpu:u9|registers:register_file"
 Info (12128): Elaborating entity "plus4" for hierarchy "cpu:u9|plus4:pc_plus4"
@@ -2409,11 +2463,11 @@ Warning (10036): Verilog HDL or VHDL warning at main_ctrl.v(275): object "Jaddr"
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(352): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(353): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(354): case item expression covers a value already covered by a previous case item
-Warning (10235): Verilog HDL Always Construct warning at main_ctrl.v(571): variable "Rfunc" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at main_ctrl.v(743): variable "Rfunc" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at main_ctrl.v(569): variable "Rfunc" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at main_ctrl.v(741): variable "Rfunc" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(769): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(770): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(771): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(772): case item expression covers a value already covered by a previous case item
-Warning (10272): Verilog HDL Case Statement warning at main_ctrl.v(773): case item expression covers a value already covered by a previous case item
 Info (12128): Elaborating entity "alu_ctrler" for hierarchy "cpu:u9|alu_ctrler:alu_ctrlera"
 Info (12128): Elaborating entity "shifter32_32_l2" for hierarchy "cpu:u9|shifter32_32_l2:shifter32_32_l2a"
 Info (12128): Elaborating entity "signext16_32" for hierarchy "cpu:u9|signext16_32:signext16_32a"
@@ -2476,8 +2530,10 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
         Info (286033): Parameter TAP_DISTANCE set to 3
         Info (286033): Parameter WIDTH set to 18
-Info (278001): Inferred 1 megafunctions from design logic
+Info (278001): Inferred 3 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "cpu:u9|alu:alua|Mult0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:u9|alu:alua|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:u9|alu:alua|Div0"
 Info (12130): Elaborated megafunction instantiation "VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0"
 Info (12133): Instantiated megafunction "VGA_OSD_RAM:u2|altshift_taps:WR_ADDR_d_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
@@ -2508,13 +2564,33 @@ Info (12133): Instantiated megafunction "cpu:u9|alu:alua|lpm_mult:Mult0" with th
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
     Info (12023): Found entity 1: mult_7dt
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following DSP element node(s):
-        Warning (14320): Synthesized away node "cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7"
-        Warning (14320): Synthesized away node "cpu:u9|alu:alua|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8"
+Info (12130): Elaborated megafunction instantiation "cpu:u9|alu:alua|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "cpu:u9|alu:alua|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kcm.tdf
+    Info (12023): Found entity 1: lpm_divide_kcm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
+Info (12130): Elaborated megafunction instantiation "cpu:u9|alu:alua|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "cpu:u9|alu:alua|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkm.tdf
+    Info (12023): Found entity 1: lpm_divide_hkm
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13014): Ignored 70 buffer(s)
-    Info (13019): Ignored 70 SOFT buffer(s)
+Info (13014): Ignored 222 buffer(s)
+    Info (13019): Ignored 222 SOFT buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "AUD_DACDAT" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "AUD_XCK" and its non-tri-state driver.
@@ -2954,19 +3030,19 @@ Warning (21074): Design contains 84 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[14]"
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[15]"
     Warning (15610): No output dependent on input pin "HSMC_RX_D_P[16]"
-Info (21057): Implemented 6860 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9111 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 91 input pins
     Info (21059): Implemented 248 output pins
     Info (21060): Implemented 141 bidirectional pins
-    Info (21061): Implemented 6233 logic cells
+    Info (21061): Implemented 8482 logic cells
     Info (21064): Implemented 140 RAM segments
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 6 DSP elements
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 647 warnings
-    Info: Peak virtual memory: 421 megabytes
-    Info: Processing ended: Thu Nov  7 14:28:21 2019
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21062): Implemented 8 DSP elements
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 631 warnings
+    Info: Peak virtual memory: 428 megabytes
+    Info: Processing ended: Thu Nov 14 15:05:18 2019
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
